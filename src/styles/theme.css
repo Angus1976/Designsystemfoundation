@@ -1,0 +1,443 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  
+  /* SuperInsight Design System - Light Mode (明亮) */
+  /* Primary Colors */
+  --color-primary: #1890FF;
+  --color-primary-hover: #40A9FF;
+  --color-primary-active: #096DD9;
+  --color-primary-light: #E6F7FF;
+  
+  /* Status Colors */
+  --color-success: #52C41A;
+  --color-success-hover: #73D13D;
+  --color-success-active: #389E0D;
+  --color-success-light: #F6FFED;
+  
+  --color-warning: #FAAD14;
+  --color-warning-hover: #FFC53D;
+  --color-warning-active: #D48806;
+  --color-warning-light: #FFFBE6;
+  
+  --color-error: #FF4D4F;
+  --color-error-hover: #FF7875;
+  --color-error-active: #D9363E;
+  --color-error-light: #FFF2F0;
+  
+  --color-accent: #722ED1;
+  
+  /* Background Colors */
+  --background: #FFFFFF;
+  --background-secondary: #FAFAFA;
+  --background-tertiary: #F5F5F5;
+  
+  /* Text Colors */
+  --foreground: rgba(0, 0, 0, 0.88);
+  --foreground-secondary: rgba(0, 0, 0, 0.65);
+  --foreground-tertiary: rgba(0, 0, 0, 0.45);
+  --foreground-disabled: rgba(0, 0, 0, 0.25);
+  
+  /* Border Colors */
+  --border: #D9D9D9;
+  --border-secondary: #F0F0F0;
+  
+  /* Surface/Card */
+  --card: #FFFFFF;
+  --card-foreground: rgba(0, 0, 0, 0.88);
+  
+  /* Component Tokens */
+  --primary: #1890FF;
+  --primary-foreground: #FFFFFF;
+  --secondary: #FAFAFA;
+  --secondary-foreground: rgba(0, 0, 0, 0.88);
+  --muted: #F5F5F5;
+  --muted-foreground: rgba(0, 0, 0, 0.65);
+  --accent: #F5F5F5;
+  --accent-foreground: rgba(0, 0, 0, 0.88);
+  --destructive: #FF4D4F;
+  --destructive-foreground: #FFFFFF;
+  --popover: #FFFFFF;
+  --popover-foreground: rgba(0, 0, 0, 0.88);
+  --input: transparent;
+  --input-background: #FFFFFF;
+  --ring: #1890FF;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02);
+  --shadow-base: 0 6px 16px rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+  
+  /* Border Radius */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+  
+  /* Charts */
+  --chart-1: #1890FF;
+  --chart-2: #52C41A;
+  --chart-3: #FAAD14;
+  --chart-4: #722ED1;
+  --chart-5: #FF4D4F;
+  
+  /* Sidebar */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: rgba(0, 0, 0, 0.88);
+  --sidebar-primary: #1890FF;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F5F5F5;
+  --sidebar-accent-foreground: rgba(0, 0, 0, 0.88);
+  --sidebar-border: #F0F0F0;
+  --sidebar-ring: #1890FF;
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+.dark {
+  /* SuperInsight Design System - Dark Mode (睿黑) */
+  /* Primary Colors - adjusted for dark backgrounds */
+  --color-primary: #1890FF;
+  --color-primary-hover: #40A9FF;
+  --color-primary-active: #096DD9;
+  --color-primary-light: rgba(24, 144, 255, 0.15);
+  
+  /* Status Colors */
+  --color-success: #52C41A;
+  --color-success-hover: #73D13D;
+  --color-success-active: #389E0D;
+  --color-success-light: rgba(82, 196, 26, 0.15);
+  
+  --color-warning: #FAAD14;
+  --color-warning-hover: #FFC53D;
+  --color-warning-active: #D48806;
+  --color-warning-light: rgba(250, 173, 20, 0.15);
+  
+  --color-error: #FF4D4F;
+  --color-error-hover: #FF7875;
+  --color-error-active: #D9363E;
+  --color-error-light: rgba(255, 77, 79, 0.15);
+  
+  --color-accent: #722ED1;
+  
+  /* Background Colors */
+  --background: #141414;
+  --background-secondary: #1F1F1F;
+  --background-tertiary: #262626;
+  
+  /* Text Colors */
+  --foreground: rgba(255, 255, 255, 0.88);
+  --foreground-secondary: rgba(255, 255, 255, 0.65);
+  --foreground-tertiary: rgba(255, 255, 255, 0.45);
+  --foreground-disabled: rgba(255, 255, 255, 0.25);
+  
+  /* Border Colors */
+  --border: rgba(255, 255, 255, 0.12);
+  --border-secondary: rgba(255, 255, 255, 0.08);
+  
+  /* Surface/Card */
+  --card: #1F1F1F;
+  --card-foreground: rgba(255, 255, 255, 0.88);
+  
+  /* Component Tokens */
+  --primary: #1890FF;
+  --primary-foreground: #FFFFFF;
+  --secondary: #1F1F1F;
+  --secondary-foreground: rgba(255, 255, 255, 0.88);
+  --muted: #262626;
+  --muted-foreground: rgba(255, 255, 255, 0.65);
+  --accent: #262626;
+  --accent-foreground: rgba(255, 255, 255, 0.88);
+  --destructive: #FF4D4F;
+  --destructive-foreground: #FFFFFF;
+  --popover: #1F1F1F;
+  --popover-foreground: rgba(255, 255, 255, 0.88);
+  --input: rgba(255, 255, 255, 0.12);
+  --input-background: #1F1F1F;
+  --ring: #1890FF;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-base: 0 6px 16px rgba(0, 0, 0, 0.32);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.36);
+  
+  /* Charts */
+  --chart-1: #1890FF;
+  --chart-2: #52C41A;
+  --chart-3: #FAAD14;
+  --chart-4: #722ED1;
+  --chart-5: #FF4D4F;
+  
+  /* Sidebar */
+  --sidebar: #141414;
+  --sidebar-foreground: rgba(255, 255, 255, 0.88);
+  --sidebar-primary: #1890FF;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: rgba(255, 255, 255, 0.88);
+  --sidebar-border: rgba(255, 255, 255, 0.12);
+  --sidebar-ring: #1890FF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+    line-height: 1.5714;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: 38px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h5 {
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5714;
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5714;
+  }
+
+  button {
+    font-size: 14px;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5714;
+  }
+
+  input, textarea, select {
+    font-size: 14px;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5714;
+  }
+
+  code, pre {
+    font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+}
+
+/* Custom Animations for SuperInsight */
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes blob {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .animate-fade-in-down {
+    animation: fade-in-down 0.6s ease-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.5s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.5s ease-out;
+  }
+
+  .animate-blob {
+    animation: blob 7s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 0.8s;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
