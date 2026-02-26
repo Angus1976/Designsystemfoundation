@@ -58,14 +58,29 @@ export function LogoAnimated({ className = '', size = 64 }: LogoAnimatedProps) {
               <stop offset="50%" stopColor="#40A9FF" />
               <stop offset="100%" stopColor="#722ED1" />
             </linearGradient>
+            <linearGradient id="tag-gradient-center" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#52C41A" />
+              <stop offset="100%" stopColor="#73D13D" />
+            </linearGradient>
           </defs>
           
           {/* Background Circle */}
-          <circle cx="16" cy="16" r="16" fill="url(#logo-gradient-center)" />
+          <circle cx="16" cy="16" r="15.5" fill="url(#logo-gradient-center)" />
+          
+          {/* Data Grid Background */}
+          <g opacity="0.15">
+            <line x1="8" y1="10" x2="24" y2="10" stroke="white" strokeWidth="0.5" />
+            <line x1="8" y1="14" x2="24" y2="14" stroke="white" strokeWidth="0.5" />
+            <line x1="8" y1="18" x2="24" y2="18" stroke="white" strokeWidth="0.5" />
+            <line x1="8" y1="22" x2="24" y2="22" stroke="white" strokeWidth="0.5" />
+            <line x1="12" y1="8" x2="12" y2="24" stroke="white" strokeWidth="0.5" />
+            <line x1="16" y1="8" x2="16" y2="24" stroke="white" strokeWidth="0.5" />
+            <line x1="20" y1="8" x2="20" y2="24" stroke="white" strokeWidth="0.5" />
+          </g>
           
           {/* W Shape */}
           <path
-            d="M9 13 L11.5 21 L16 15.5 L20.5 21 L23 13"
+            d="M8.5 12 L11 21 L16 14.5 L21 21 L23.5 12"
             stroke="white"
             strokeWidth="2.8"
             strokeLinecap="round"
@@ -74,22 +89,64 @@ export function LogoAnimated({ className = '', size = 64 }: LogoAnimatedProps) {
             className="animate-draw-path"
           />
           
-          {/* Data flow */}
+          {/* Data points */}
+          <circle cx="11" cy="21" r="1.2" fill="white" opacity="0.9" className="animate-pulse-slow" />
+          <circle cx="16" cy="14.5" r="1.2" fill="white" opacity="0.9" className="animate-pulse-slow" style={{ animationDelay: '0.3s' }} />
+          <circle cx="21" cy="21" r="1.2" fill="white" opacity="0.9" className="animate-pulse-slow" style={{ animationDelay: '0.6s' }} />
+          
+          {/* Annotation Tag */}
+          <g transform="translate(21, 6)" className="animate-float">
+            <path
+              d="M0 0 L6 0 L6 4 L3 7 L0 4 Z"
+              fill="url(#tag-gradient-center)"
+            />
+            <circle cx="3.5" cy="2" r="0.8" fill="white" opacity="0.9" />
+          </g>
+          
+          {/* Data flow curves */}
           <path
-            d="M7 9 Q10 11, 13 9 T19 9 T25 9"
+            d="M6 24 Q8 22, 10 24"
             stroke="white"
-            strokeWidth="1.8"
+            strokeWidth="1.5"
             strokeLinecap="round"
             fill="none"
-            opacity="0.5"
+            opacity="0.4"
             className="animate-draw-path-delayed"
           />
+          <path
+            d="M13 25 Q15 23.5, 17 25"
+            stroke="white"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            fill="none"
+            opacity="0.4"
+            className="animate-draw-path-delayed"
+            style={{ animationDelay: '0.2s' }}
+          />
+          <path
+            d="M20 24 Q22 22, 24 24"
+            stroke="white"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            fill="none"
+            opacity="0.4"
+            className="animate-draw-path-delayed"
+            style={{ animationDelay: '0.4s' }}
+          />
           
-          {/* Annotation dot */}
+          {/* AI indicator dot */}
           <circle 
-            cx="24.5" 
-            cy="22.5" 
-            r="3" 
+            cx="25.5" 
+            cy="25.5" 
+            r="2.5" 
+            fill="#52C41A"
+            opacity="0.3"
+            className="animate-pulse"
+          />
+          <circle 
+            cx="25.5" 
+            cy="25.5" 
+            r="1.8" 
             fill="#52C41A"
             className="animate-pulse"
           />
@@ -126,6 +183,26 @@ export function LogoAnimated({ className = '', size = 64 }: LogoAnimatedProps) {
           }
         }
         
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-2px);
+          }
+        }
+        
+        @keyframes pulse-slow {
+          0%, 100% {
+            opacity: 0.9;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.5;
+            transform: scale(0.8);
+          }
+        }
+        
         .animate-dash {
           animation: dash 2s ease-in-out infinite;
         }
@@ -140,6 +217,14 @@ export function LogoAnimated({ className = '', size = 64 }: LogoAnimatedProps) {
         
         .animate-spin-slow {
           animation: spin-slow 3s linear infinite;
+        }
+        
+        .animate-float {
+          animation: float 2s ease-in-out infinite;
+        }
+        
+        .animate-pulse-slow {
+          animation: pulse-slow 2s ease-in-out infinite;
         }
       `}</style>
     </div>
@@ -167,12 +252,27 @@ export function LogoPulse({ className = '', size = 48 }: LogoAnimatedProps) {
             <stop offset="50%" stopColor="#40A9FF" />
             <stop offset="100%" stopColor="#722ED1" />
           </linearGradient>
+          <linearGradient id="tag-gradient-pulse" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#52C41A" />
+            <stop offset="100%" stopColor="#73D13D" />
+          </linearGradient>
         </defs>
         
-        <circle cx="16" cy="16" r="16" fill="url(#logo-gradient-pulse)" />
+        <circle cx="16" cy="16" r="15.5" fill="url(#logo-gradient-pulse)" />
+        
+        {/* Data Grid */}
+        <g opacity="0.15">
+          <line x1="8" y1="10" x2="24" y2="10" stroke="white" strokeWidth="0.5" />
+          <line x1="8" y1="14" x2="24" y2="14" stroke="white" strokeWidth="0.5" />
+          <line x1="8" y1="18" x2="24" y2="18" stroke="white" strokeWidth="0.5" />
+          <line x1="8" y1="22" x2="24" y2="22" stroke="white" strokeWidth="0.5" />
+          <line x1="12" y1="8" x2="12" y2="24" stroke="white" strokeWidth="0.5" />
+          <line x1="16" y1="8" x2="16" y2="24" stroke="white" strokeWidth="0.5" />
+          <line x1="20" y1="8" x2="20" y2="24" stroke="white" strokeWidth="0.5" />
+        </g>
         
         <path
-          d="M9 13 L11.5 21 L16 15.5 L20.5 21 L23 13"
+          d="M8.5 12 L11 21 L16 14.5 L21 21 L23.5 12"
           stroke="white"
           strokeWidth="2.8"
           strokeLinecap="round"
@@ -180,16 +280,48 @@ export function LogoPulse({ className = '', size = 48 }: LogoAnimatedProps) {
           fill="none"
         />
         
+        {/* Data points */}
+        <circle cx="11" cy="21" r="1.2" fill="white" opacity="0.9" />
+        <circle cx="16" cy="14.5" r="1.2" fill="white" opacity="0.9" />
+        <circle cx="21" cy="21" r="1.2" fill="white" opacity="0.9" />
+        
+        {/* Annotation Tag */}
+        <g transform="translate(21, 6)">
+          <path
+            d="M0 0 L6 0 L6 4 L3 7 L0 4 Z"
+            fill="url(#tag-gradient-pulse)"
+          />
+          <circle cx="3.5" cy="2" r="0.8" fill="white" opacity="0.9" />
+        </g>
+        
+        {/* Data flow curves */}
         <path
-          d="M7 9 Q10 11, 13 9 T19 9 T25 9"
+          d="M6 24 Q8 22, 10 24"
           stroke="white"
-          strokeWidth="1.8"
+          strokeWidth="1.5"
           strokeLinecap="round"
           fill="none"
-          opacity="0.5"
+          opacity="0.4"
+        />
+        <path
+          d="M13 25 Q15 23.5, 17 25"
+          stroke="white"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          fill="none"
+          opacity="0.4"
+        />
+        <path
+          d="M20 24 Q22 22, 24 24"
+          stroke="white"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          fill="none"
+          opacity="0.4"
         />
         
-        <circle cx="24.5" cy="22.5" r="3" fill="#52C41A" />
+        <circle cx="25.5" cy="25.5" r="2.5" fill="#52C41A" opacity="0.3" />
+        <circle cx="25.5" cy="25.5" r="1.8" fill="#52C41A" />
       </svg>
     </div>
   );

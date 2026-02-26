@@ -3,13 +3,21 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 type Theme = 'light' | 'dark';
 type Language = 'zh' | 'en';
 
+interface ClientCompany {
+  name: string;
+  nameEn: string;
+  logo?: string; // URL to logo image
+}
+
 interface AppContextType {
   theme: Theme;
   language: Language;
+  clientCompany: ClientCompany;
   toggleTheme: () => void;
   setTheme: (theme: Theme) => void;
   toggleLanguage: () => void;
   setLanguage: (language: Language) => void;
+  setClientCompany: (company: ClientCompany) => void;
   t: (key: string) => string;
 }
 
@@ -220,6 +228,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     return (stored as Language) || 'zh';
   });
 
+  const [clientCompany, setClientCompanyState] = useState<ClientCompany>({
+    name: 'SuperInsight',
+    nameEn: 'SuperInsight',
+    logo: 'https://example.com/logo.png',
+  });
+
   useEffect(() => {
     const root = document.documentElement;
     if (theme === 'dark') {
@@ -250,6 +264,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setLanguageState(newLanguage);
   };
 
+  const setClientCompany = (company: ClientCompany) => {
+    setClientCompanyState(company);
+  };
+
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations.zh] || key;
   };
@@ -259,10 +277,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       value={{
         theme,
         language,
+        clientCompany,
         toggleTheme,
         setTheme,
         toggleLanguage,
         setLanguage,
+        setClientCompany,
         t,
       }}
     >

@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router';
+import { AppProvider } from './context/AppContext';
 import { AppLayout } from './components/layout/AppLayout';
 import { Dashboard } from './pages/Dashboard';
 import { Tasks } from './pages/Tasks';
@@ -23,184 +24,118 @@ import { Settings } from './pages/Settings';
 import { Workspaces } from './pages/Workspaces';
 import { ComponentShowcase } from './pages/ComponentShowcase';
 import { LogoShowcase } from './components/ui/logo-showcase';
+import { AIAnnotation } from './pages/AIAnnotation';
+import { Augmentation } from './pages/Augmentation';
+import { FeatureShowcase } from './pages/FeatureShowcase';
+
+// Root layout component that provides AppContext to all routes
+function RootLayout({ children }: { children: React.ReactNode }) {
+  return <AppProvider>{children}</AppProvider>;
+}
 
 export const router = createBrowserRouter([
   {
+    path: '/',
+    element: <RootLayout><AppLayout><Dashboard /></AppLayout></RootLayout>,
+  },
+  {
     path: '/login',
-    element: <Login />,
+    element: <RootLayout><Login /></RootLayout>,
   },
   {
     path: '/register',
-    element: <Register />,
+    element: <RootLayout><Register /></RootLayout>,
   },
   {
     path: '/forgot-password',
-    element: <ForgotPassword />,
+    element: <RootLayout><ForgotPassword /></RootLayout>,
   },
   {
     path: '/reset-password',
-    element: <ResetPassword />,
+    element: <RootLayout><ResetPassword /></RootLayout>,
   },
   {
     path: '/error-403',
-    element: <Error403 />,
+    element: <RootLayout><Error403 /></RootLayout>,
   },
   {
     path: '/error-500',
-    element: <Error500 />,
+    element: <RootLayout><Error500 /></RootLayout>,
   },
   {
     path: '/welcome',
-    element: (
-      <AppLayout>
-        <Welcome />
-      </AppLayout>
-    ),
-  },
-  {
-    path: '/',
-    element: (
-      <AppLayout>
-        <Dashboard />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><Welcome /></AppLayout></RootLayout>,
   },
   {
     path: '/logo-showcase',
-    element: (
-      <AppLayout>
-        <LogoShowcase />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><LogoShowcase /></AppLayout></RootLayout>,
   },
   {
     path: '/tasks',
-    element: (
-      <AppLayout>
-        <Tasks />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><Tasks /></AppLayout></RootLayout>,
   },
   {
     path: '/ai-assistant',
-    element: (
-      <AppLayout>
-        <AIAssistant />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><AIAssistant /></AppLayout></RootLayout>,
   },
   {
     path: '/data-structuring',
-    element: (
-      <AppLayout>
-        <DataStructuring />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><DataStructuring /></AppLayout></RootLayout>,
   },
   {
     path: '/data-sync',
-    element: (
-      <AppLayout>
-        <DataSync />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><DataSync /></AppLayout></RootLayout>,
   },
   {
     path: '/ai-annotation',
-    element: (
-      <AppLayout>
-        <div className="p-6">
-          <h1 className="text-2xl font-semibold">AI 标注 / AI Annotation</h1>
-          <p className="text-muted-foreground mt-2">功能开发中... / Coming soon...</p>
-        </div>
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><AIAnnotation /></AppLayout></RootLayout>,
   },
   {
     path: '/augmentation',
-    element: (
-      <AppLayout>
-        <div className="p-6">
-          <h1 className="text-2xl font-semibold">数据增强 / Augmentation</h1>
-          <p className="text-muted-foreground mt-2">功能开发中... / Coming soon...</p>
-        </div>
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><Augmentation /></AppLayout></RootLayout>,
   },
   {
     path: '/quality',
-    element: (
-      <AppLayout>
-        <QualityManagement />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><QualityManagement /></AppLayout></RootLayout>,
   },
   {
     path: '/security',
-    element: (
-      <AppLayout>
-        <SecurityCenter />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><SecurityCenter /></AppLayout></RootLayout>,
   },
   {
     path: '/admin',
-    element: (
-      <AppLayout>
-        <AdminConsole />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><AdminConsole /></AppLayout></RootLayout>,
   },
   {
     path: '/billing',
-    element: (
-      <AppLayout>
-        <Billing />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><Billing /></AppLayout></RootLayout>,
   },
   {
     path: '/license',
-    element: (
-      <AppLayout>
-        <License />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><License /></AppLayout></RootLayout>,
   },
   {
     path: '/help-center',
-    element: (
-      <AppLayout>
-        <HelpCenter />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><HelpCenter /></AppLayout></RootLayout>,
   },
   {
     path: '/settings',
-    element: (
-      <AppLayout>
-        <Settings />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><Settings /></AppLayout></RootLayout>,
   },
   {
     path: '/workspaces',
-    element: (
-      <AppLayout>
-        <Workspaces />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><Workspaces /></AppLayout></RootLayout>,
   },
   {
     path: '/component-showcase',
-    element: (
-      <AppLayout>
-        <ComponentShowcase />
-      </AppLayout>
-    ),
+    element: <RootLayout><AppLayout><ComponentShowcase /></AppLayout></RootLayout>,
+  },
+  {
+    path: '/feature-showcase',
+    element: <RootLayout><AppLayout><FeatureShowcase /></AppLayout></RootLayout>,
   },
   {
     path: '*',
-    element: <NotFound />,
+    element: <RootLayout><NotFound /></RootLayout>,
   },
 ]);

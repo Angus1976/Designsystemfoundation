@@ -10,16 +10,17 @@
   [![React](https://img.shields.io/badge/React-18+-61DAFB.svg?logo=react)](https://reactjs.org/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6.svg?logo=typescript)](https://www.typescriptlang.org/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4+-06B6D4.svg?logo=tailwind-css)](https://tailwindcss.com/)
+  [![Version](https://img.shields.io/badge/version-2.6.1-green.svg)](VERSION.md)
 
   <p>
     <a href="#快速开始">快速开始</a> •
     <a href="#功能模块">功能模块</a> •
     <a href="#技术栈">技术栈</a> •
-    <a href="QUICK_START.md">快速指南</a> •
-    <a href="FEATURES.md">功能清单</a> •
+    <a href="QUICK_START_GUIDE.md">快速指南</a> •
     <a href="VERSION.md">版本信息</a> •
-    <a href="LOGO_DESIGN.md">Logo 设计</a> •
-    <a href="OPTIMIZATION_SUMMARY.md">优化报告</a>
+    <a href="LOGO_DESIGN_DOCUMENTATION.md">Logo 设计</a> •
+    <a href="AI_PAGES_DOCUMENTATION.md">AI 功能文档</a> •
+    <a href="PROJECT_COMPLETE_SUMMARY.md">项目总结</a>
   </p>
 </div>
 
@@ -52,10 +53,21 @@
 - **🗃️ 数据结构化 (Data Structuring)**: 数据导入、清洗、转换
 - **🔄 数据同步 (Data Sync)**: 多平台数据同步和备份
 
-### AI 能力
+### AI 能力 ⭐ **v2.6.0 全新发布**
 
-- **✨ AI 标注 (AI Annotation)**: 自动化智能标注
-- **🎭 数据增强 (Augmentation)**: 数据扩充和变换
+- **✨ AI 标注 (AI Annotation)**: 
+  - 智能任务管理表格（7列完整数据）
+  - AI 模型管理卡片网格（6个预训练模型）
+  - 标注模板库（6个预设模板）
+  - 实时进度追踪和准确率统计
+  - 支持 NER、分类、分割、检测等多种标注类型
+
+- **🎭 数据增强 (Augmentation)**:
+  - 数据统计仪表盘（4个核心指标）
+  - 样本网格管理（响应式2-6列布局）
+  - 可视化增强配置（6种增强方法）
+  - 强度滑块实时调节（0-100%）
+  - 批量上传和导出功能
 
 ### 质量与安全
 
@@ -67,6 +79,48 @@
 - **⚙️ 管理控制台 (Admin Console)**: 系统配置、用户管理
 - **💳 计费管理 (Billing)**: 账单、套餐、支付管理
 - **🔑 许可证管理 (License)**: 授权管理、功能控制
+
+---
+
+## 🆕 最新更新 (v2.6.1)
+
+### 🎨 Logo 全面升级
+
+全新设计的"问视间 (Wins)"Logo，深度融合数据标注业务特色：
+
+- ✅ **数据网格背景** - 象征结构化数据（7条交叉线）
+- ✅ **数据点高亮** - 标注目标点（3个白色圆点 + 发光效果）
+- ✅ **标注标签图标** - 绿色渐变标签，突出核心业务
+- ✅ **数据流曲线** - 数据处理流程（3条波浪曲线）
+- ✅ **AI 指示点增强** - 3层同心圆设计 + 脉冲动画
+
+**5 种 Logo 变体**:
+- 完整版（带中英文标题）
+- 图标版（仅图标）
+- 简化版（圆角矩形背景）
+- 动画版（旋转外圈 + 多重动画）
+- 脉冲版（简单呼吸动画）
+
+### 🤖 AI 功能页面
+
+**代码统计**:
+- AIAnnotation.tsx: 630 行
+- Augmentation.tsx: 750 行
+- 总计: **1,780+ 行**高质量代码
+
+**功能亮点**:
+- 60+ 个精美卡片组件
+- 2 个复杂数据表格
+- 12+ 个状态徽章变体
+- 10+ 种流畅动画效果
+
+### 📚 完整文档体系 (8,000+ 行)
+
+- [AI_PAGES_DOCUMENTATION.md](AI_PAGES_DOCUMENTATION.md) - AI 功能详细文档（3,000+行）
+- [LOGO_DESIGN_DOCUMENTATION.md](LOGO_DESIGN_DOCUMENTATION.md) - Logo 设计文档（2,500+行）
+- [PROJECT_COMPLETE_SUMMARY.md](PROJECT_COMPLETE_SUMMARY.md) - 项目完成总结
+- [QUICK_START_GUIDE.md](QUICK_START_GUIDE.md) - 5分钟快速入门
+- [VERSION.md](VERSION.md) - 完整版本历史
 
 ---
 
@@ -294,7 +348,7 @@ import { Logo, LogoIconSimple } from '@/components/ui/logo';
 ## 🙏 致谢
 
 - [shadcn/ui](https://ui.shadcn.com/) - UI 组件库
-- [Tailwind CSS](https://tailwindcss.com/) - CSS ���架
+- [Tailwind CSS](https://tailwindcss.com/) - CSS 架
 - [Lucide](https://lucide.dev/) - 图标库
 - [Recharts](https://recharts.org/) - 图表库
 - [Unsplash](https://unsplash.com/) - 图片资源

@@ -58,7 +58,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [shortcutsDialogOpen, setShortcutsDialogOpen] = useState(false);
-  const { theme, language, toggleTheme, toggleLanguage, t } = useApp();
+  const { theme, language, clientCompany, toggleTheme, toggleLanguage, t } = useApp();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -213,16 +213,30 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
   const SidebarContent = () => (
     <>
-      {/* Logo */}
-      <div className="h-14 flex items-center justify-between px-4 border-b border-border">
+      {/* Client Company Logo and Name */}
+      <div className="h-14 flex items-center px-4 border-b border-border">
         {!sidebarCollapsed ? (
-          <Link to="/" className="flex items-center transition-transform hover:scale-105 duration-300">
-            <Logo showSubtitle={true} />
-          </Link>
+          <div className="flex items-center gap-3 w-full transition-transform hover:scale-105 duration-300">
+            {/* Company Logo */}
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1890FF] to-[#722ED1] flex items-center justify-center text-white font-bold flex-shrink-0">
+              {language === 'zh' ? clientCompany.name.charAt(0) : clientCompany.nameEn.charAt(0)}
+            </div>
+            {/* Company Name */}
+            <div className="flex-1 min-w-0">
+              <h2 className="text-sm font-semibold truncate">
+                {language === 'zh' ? clientCompany.name : clientCompany.nameEn}
+              </h2>
+              <p className="text-xs text-muted-foreground truncate">
+                {language === 'zh' ? '企业版' : 'Enterprise'}
+              </p>
+            </div>
+          </div>
         ) : (
-          <Link to="/" className="flex items-center justify-center w-full transition-transform hover:scale-110 duration-300">
-            <LogoIconSimple className="w-8 h-8" />
-          </Link>
+          <div className="flex items-center justify-center w-full">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1890FF] to-[#722ED1] flex items-center justify-center text-white font-bold transition-transform hover:scale-110 duration-300">
+              {language === 'zh' ? clientCompany.name.charAt(0) : clientCompany.nameEn.charAt(0)}
+            </div>
+          </div>
         )}
       </div>
 
@@ -301,9 +315,21 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
           <div className="fixed inset-0 bg-black/50" onClick={() => setMobileMenuOpen(false)} />
           <aside className="fixed left-0 top-0 bottom-0 w-64 bg-sidebar border-r border-sidebar-border flex flex-col">
             <div className="h-14 flex items-center justify-between px-4 border-b border-border">
-              <Link to="/" className="flex items-center" onClick={() => setMobileMenuOpen(false)}>
-                <Logo showSubtitle={true} />
-              </Link>
+              <div className="flex items-center gap-3 flex-1 min-w-0" onClick={() => setMobileMenuOpen(false)}>
+                {/* Company Logo */}
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1890FF] to-[#722ED1] flex items-center justify-center text-white font-bold flex-shrink-0">
+                  {language === 'zh' ? clientCompany.name.charAt(0) : clientCompany.nameEn.charAt(0)}
+                </div>
+                {/* Company Name */}
+                <div className="flex-1 min-w-0">
+                  <h2 className="text-sm font-semibold truncate">
+                    {language === 'zh' ? clientCompany.name : clientCompany.nameEn}
+                  </h2>
+                  <p className="text-xs text-muted-foreground truncate">
+                    {language === 'zh' ? '企业版' : 'Enterprise'}
+                  </p>
+                </div>
+              </div>
               <Button
                 variant="ghost"
                 size="sm"
@@ -445,6 +471,24 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         {/* Page Content */}
         <main className="flex-1 overflow-auto">
           {children}
+          
+          {/* Footer with SuperInsight Logo */}
+          <footer className="bg-card border-t border-border py-4 px-6">
+            <div className="flex flex-col items-center justify-center gap-2">
+              <Link to="/logo-showcase" className="transition-transform hover:scale-105 duration-300">
+                <Logo showSubtitle={false} className="opacity-60 hover:opacity-100 transition-opacity" />
+              </Link>
+              <p className="text-xs text-muted-foreground text-center">
+                {language === 'zh' ? '技术支持' : 'Powered by'}{' '}
+                <span className="font-medium text-[#1890FF]">
+                  {language === 'zh' ? '问视间 SuperInsight' : 'SuperInsight'}
+                </span>
+              </p>
+              <p className="text-xs text-muted-foreground">
+                © 2025 {language === 'zh' ? '问视间科技' : 'SuperInsight Tech'}. {language === 'zh' ? '保留所有权利' : 'All rights reserved'}.
+              </p>
+            </div>
+          </footer>
         </main>
       </div>
 
