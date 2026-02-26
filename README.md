@@ -16,6 +16,8 @@
     <a href="#功能模块">功能模块</a> •
     <a href="#技术栈">技术栈</a> •
     <a href="QUICK_START.md">快速指南</a> •
+    <a href="FEATURES.md">功能清单</a> •
+    <a href="VERSION.md">版本信息</a> •
     <a href="LOGO_DESIGN.md">Logo 设计</a> •
     <a href="OPTIMIZATION_SUMMARY.md">优化报告</a>
   </p>
@@ -292,7 +294,7 @@ import { Logo, LogoIconSimple } from '@/components/ui/logo';
 ## 🙏 致谢
 
 - [shadcn/ui](https://ui.shadcn.com/) - UI 组件库
-- [Tailwind CSS](https://tailwindcss.com/) - CSS 框架
+- [Tailwind CSS](https://tailwindcss.com/) - CSS ���架
 - [Lucide](https://lucide.dev/) - 图标库
 - [Recharts](https://recharts.org/) - 图表库
 - [Unsplash](https://unsplash.com/) - 图片资源
