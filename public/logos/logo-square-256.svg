@@ -14,66 +14,69 @@
   </defs>
 
   <!-- Background Circle -->
-  <circle cx="128" cy="108" r="96" fill="url(#bgSq256)"/>
+  <circle cx="128" cy="110" r="100" fill="url(#bgSq256)"/>
 
-  <!-- W Shape - 4 Bars -->
+  <!-- "Wi" Shape -->
   <g filter="url(#shadow256)">
-    <!-- Bar 1 (Medium) -->
-    <rect x="56" y="112" width="32" height="96" rx="8" fill="url(#wSq256)"/>
+    <!-- W: 4 Tilted Bars -->
+    <g transform="rotate(-8 52 144)">
+      <rect x="40" y="104" width="24" height="80" rx="6" fill="url(#wSq256)"/>
+    </g>
     
-    <!-- Bar 2 (Lowest - W valley) -->
-    <rect x="100" y="144" width="32" height="64" rx="8" fill="url(#wSq256)"/>
+    <g transform="rotate(12 76 160)">
+      <rect x="68" y="136" width="24" height="56" rx="6" fill="url(#wSq256)"/>
+    </g>
     
-    <!-- Bar 3 (Medium-High) -->
-    <rect x="144" y="96" width="32" height="112" rx="8" fill="url(#wSq256)"/>
+    <g transform="rotate(-10 112 136)">
+      <rect x="104" y="96" width="24" height="80" rx="6" fill="url(#wSq256)"/>
+    </g>
     
-    <!-- Bar 4 (Highest - Rising!) -->
-    <rect x="188" y="64" width="32" height="144" rx="8" fill="url(#wSq256)"/>
+    <g transform="rotate(8 148 120)">
+      <rect x="140" y="80" width="24" height="96" rx="6" fill="url(#wSq256)"/>
+    </g>
+    
+    <!-- i: Straight bar -->
+    <rect x="184" y="56" width="24" height="120" rx="6" fill="url(#wSq256)"/>
   </g>
   
-  <!-- Annotation Tags -->
-  <g opacity="0.8">
-    <rect x="64" y="96" width="16" height="10" rx="3" fill="#52C41A"/>
-    <rect x="108" y="128" width="16" height="10" rx="3" fill="#52C41A"/>
-    <rect x="152" y="80" width="16" height="10" rx="3" fill="#52C41A"/>
-    <rect x="196" y="48" width="16" height="10" rx="3" fill="#52C41A"/>
+  <!-- Red Dot for "i" -->
+  <circle cx="196" cy="40" r="12" fill="#FF4D4F" filter="url(#shadow256)"/>
+  
+  <!-- Wave Line -->
+  <path d="M 52 144 Q 76 168 100 156 T 152 120 Q 172 104 196 56" 
+        stroke="#FFFFFF" 
+        stroke-width="5" 
+        fill="none" 
+        opacity="0.6"
+        stroke-linecap="round"/>
+  
+  <!-- Data Points -->
+  <g filter="url(#shadow256)">
+    <circle cx="52" cy="144" r="7" fill="#FFFFFF"/>
+    <circle cx="100" cy="160" r="7" fill="#FFFFFF"/>
+    <circle cx="116" cy="136" r="7" fill="#FFFFFF"/>
+    <circle cx="152" cy="120" r="7" fill="#FFFFFF"/>
+    <circle cx="196" cy="88" r="7" fill="#FFFFFF"/>
   </g>
   
-  <!-- Success Arrow -->
-  <path d="M 196 48 L 208 32 L 220 48" 
+  <!-- Arrow -->
+  <path d="M 188 40 L 200 24 L 212 40" 
         stroke="#52C41A" 
         stroke-width="6" 
         fill="none" 
         stroke-linecap="round" 
         stroke-linejoin="round"/>
   
-  <!-- Data Points -->
-  <g filter="url(#shadow256)">
-    <circle cx="72" cy="104" r="8" fill="#FFFFFF"/>
-    <circle cx="116" cy="136" r="8" fill="#FFFFFF"/>
-    <circle cx="160" cy="88" r="8" fill="#FFFFFF"/>
-    <circle cx="204" cy="56" r="8" fill="#FFFFFF"/>
-  </g>
-  
-  <!-- Growth Trend Line -->
-  <path d="M 72 104 L 116 136 L 160 88 L 204 56" 
-        stroke="#FFFFFF" 
-        stroke-width="5" 
-        fill="none" 
-        opacity="0.6"
-        stroke-linecap="round"
-        stroke-linejoin="round"/>
-  
   <!-- Baseline Grid -->
-  <g opacity="0.12">
-    <line x1="48" y1="208" x2="224" y2="208" stroke="#1890FF" stroke-width="2"/>
-    <line x1="48" y1="176" x2="224" y2="176" stroke="#1890FF" stroke-width="1.5"/>
+  <g opacity="0.1">
+    <line x1="32" y1="192" x2="216" y2="192" stroke="#1890FF" stroke-width="2"/>
+    <line x1="32" y1="168" x2="216" y2="168" stroke="#1890FF" stroke-width="1.5"/>
   </g>
 
   <!-- Text Section -->
   <g>
     <!-- Chinese Name -->
-    <text x="128" y="232" 
+    <text x="128" y="228" 
           font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
           font-size="32" 
           font-weight="700" 
@@ -84,7 +87,7 @@
     </text>
 
     <!-- English Name -->
-    <text x="128" y="252" 
+    <text x="128" y="250" 
           font-family="Arial, Helvetica, sans-serif" 
           font-size="18" 
           font-weight="700" 

@@ -10,51 +10,60 @@
     </linearGradient>
   </defs>
 
-  <!-- Logo Icon: W Shape with 4 Bars (Static) -->
-  <g transform="translate(8, 16)">
+  <!-- Logo Icon: "Wi" Shape (Static) -->
+  <g transform="translate(6, 14)">
     <!-- Background Circle -->
-    <circle cx="32" cy="24" r="28" fill="url(#glowGradientStatic)" opacity="0.4"/>
+    <circle cx="34" cy="26" r="30" fill="url(#glowGradientStatic)" opacity="0.4"/>
     
-    <!-- W Shape - 4 Bars: 高-低-高-最高 -->
-    <rect x="12" y="20" width="9" height="28" rx="2.5" fill="url(#wGradientStatic)"/>
-    <rect x="24" y="28" width="9" height="20" rx="2.5" fill="url(#wGradientStatic)"/>
-    <rect x="36" y="16" width="9" height="32" rx="2.5" fill="url(#wGradientStatic)"/>
-    <rect x="48" y="8" width="9" height="40" rx="2.5" fill="url(#wGradientStatic)"/>
-    
-    <!-- Annotation Tag Icons -->
-    <g opacity="0.8">
-      <rect x="14" y="16" width="5" height="3" rx="0.8" fill="#52C41A"/>
-      <rect x="26" y="24" width="5" height="3" rx="0.8" fill="#52C41A"/>
-      <rect x="38" y="12" width="5" height="3" rx="0.8" fill="#52C41A"/>
-      <rect x="50" y="4" width="5" height="3" rx="0.8" fill="#52C41A"/>
+    <!-- "W" Shape - 4 Tilted Bars -->
+    <g transform="rotate(-8 16 32)">
+      <rect x="12" y="20" width="8" height="28" rx="2.5" fill="url(#wGradientStatic)"/>
     </g>
     
+    <g transform="rotate(12 24 36)">
+      <rect x="22" y="28" width="8" height="20" rx="2.5" fill="url(#wGradientStatic)"/>
+    </g>
+    
+    <g transform="rotate(-10 36 30)">
+      <rect x="34" y="18" width="8" height="30" rx="2.5" fill="url(#wGradientStatic)"/>
+    </g>
+    
+    <g transform="rotate(8 48 26)">
+      <rect x="46" y="14" width="8" height="34" rx="2.5" fill="url(#wGradientStatic)"/>
+    </g>
+    
+    <!-- Bar 5: "i" shape - Straight -->
+    <rect x="60" y="8" width="8" height="40" rx="2.5" fill="url(#wGradientStatic)"/>
+    
+    <!-- Red Dot forming "i" -->
+    <circle cx="64" cy="3" r="3.5" fill="#FF4D4F"/>
+    
+    <!-- Wave Line -->
+    <path d="M 16 32 Q 24 40 30 36 T 48 26 Q 56 22 64 8" 
+          stroke="#FFFFFF" 
+          stroke-width="2" 
+          fill="none" 
+          opacity="0.7"
+          stroke-linecap="round"/>
+    
+    <!-- Data Points -->
+    <circle cx="16" cy="32" r="2.5" fill="#FFFFFF"/>
+    <circle cx="30" cy="36" r="2.5" fill="#FFFFFF"/>
+    <circle cx="38" cy="30" r="2.5" fill="#FFFFFF"/>
+    <circle cx="50" cy="26" r="2.5" fill="#FFFFFF"/>
+    <circle cx="64" cy="16" r="2.5" fill="#FFFFFF"/>
+    
     <!-- Success Arrow -->
-    <path d="M 52 2 L 56 -2 L 60 2" 
+    <path d="M 62 2 L 66 -2 L 70 2" 
           stroke="#52C41A" 
           stroke-width="2.5" 
           fill="none" 
           stroke-linecap="round" 
           stroke-linejoin="round"/>
-    
-    <!-- Data Points -->
-    <circle cx="16.5" cy="18" r="2.5" fill="#FFFFFF"/>
-    <circle cx="28.5" cy="26" r="2.5" fill="#FFFFFF"/>
-    <circle cx="40.5" cy="14" r="2.5" fill="#FFFFFF"/>
-    <circle cx="52.5" cy="6" r="2.5" fill="#FFFFFF"/>
-    
-    <!-- Connecting Line -->
-    <path d="M 16.5 18 L 28.5 26 L 40.5 14 L 52.5 6" 
-          stroke="#FFFFFF" 
-          stroke-width="1.8" 
-          fill="none" 
-          opacity="0.7"
-          stroke-linecap="round"
-          stroke-linejoin="round"/>
   </g>
 
   <!-- Brand Text -->
-  <text x="88" y="38" 
+  <text x="90" y="38" 
         font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
         font-size="22" 
         font-weight="700" 
@@ -63,7 +72,7 @@
     问视间
   </text>
 
-  <text x="88" y="58" 
+  <text x="90" y="58" 
         font-family="Arial, Helvetica, sans-serif" 
         font-size="14" 
         font-weight="600" 
@@ -72,11 +81,11 @@
     WINS
   </text>
 
-  <text x="135" y="58" 
+  <text x="138" y="58" 
         font-family="PingFang SC, Microsoft YaHei, sans-serif" 
         font-size="11" 
         fill="currentColor" 
         opacity="0.65">
-    标注赋能，智胜未来
+    数据向好，智赢未来
   </text>
 </svg>

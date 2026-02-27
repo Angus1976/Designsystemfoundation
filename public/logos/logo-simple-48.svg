@@ -9,25 +9,36 @@
   <!-- Background -->
   <rect width="48" height="48" rx="10" fill="url(#simple48)"/>
 
-  <!-- Simplified W Shape (White) - 4 Bars -->
+  <!-- Simplified "Wi" (White) -->
   <g opacity="0.95">
-    <!-- Bar 1 -->
-    <rect x="9" y="22" width="6" height="18" rx="1.5" fill="#FFFFFF"/>
+    <!-- W: 4 Tilted Bars -->
+    <g transform="rotate(-8 8 28)">
+      <rect x="6" y="20" width="4" height="14" rx="1.5" fill="#FFFFFF"/>
+    </g>
     
-    <!-- Bar 2 (Lowest) -->
-    <rect x="17" y="28" width="6" height="12" rx="1.5" fill="#FFFFFF"/>
+    <g transform="rotate(12 12 32)">
+      <rect x="11" y="26" width="4" height="10" rx="1.5" fill="#FFFFFF"/>
+    </g>
     
-    <!-- Bar 3 -->
-    <rect x="25" y="20" width="6" height="20" rx="1.5" fill="#FFFFFF"/>
+    <g transform="rotate(-10 18 26)">
+      <rect x="17" y="18" width="4" height="14" rx="1.5" fill="#FFFFFF"/>
+    </g>
     
-    <!-- Bar 4 (Highest) -->
-    <rect x="33" y="14" width="6" height="26" rx="1.5" fill="#FFFFFF"/>
+    <g transform="rotate(8 25 22)">
+      <rect x="24" y="14" width="4" height="16" rx="1.5" fill="#FFFFFF"/>
+    </g>
+    
+    <!-- i: Straight bar -->
+    <rect x="32" y="10" width="4" height="22" rx="1.5" fill="#FFFFFF"/>
   </g>
   
-  <!-- Success Arrow -->
-  <path d="M 34 11 L 37.5 7.5 L 41 11" 
+  <!-- Red Dot for "i" -->
+  <circle cx="34" cy="7" r="2" fill="#FF4D4F"/>
+  
+  <!-- Arrow -->
+  <path d="M 32 7 L 35.5 3.5 L 39 7" 
         stroke="#FFFFFF" 
-        stroke-width="2" 
+        stroke-width="1.8" 
         fill="none" 
         stroke-linecap="round" 
         stroke-linejoin="round"/>

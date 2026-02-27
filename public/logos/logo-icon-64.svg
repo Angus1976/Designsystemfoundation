@@ -13,47 +13,48 @@
   <!-- Background -->
   <circle cx="32" cy="32" r="28" fill="url(#bgGrad64)"/>
 
-  <!-- W Shape - 4 Bars: 高-低-高-最高 -->
-  <!-- Bar 1 (Medium) -->
-  <rect x="14" y="28" width="8" height="24" rx="2" fill="url(#wGrad64)"/>
-  
-  <!-- Bar 2 (Lowest - W valley) -->
-  <rect x="25" y="36" width="8" height="16" rx="2" fill="url(#wGrad64)"/>
-  
-  <!-- Bar 3 (Medium-High) -->
-  <rect x="36" y="24" width="8" height="28" rx="2" fill="url(#wGrad64)"/>
-  
-  <!-- Bar 4 (Highest - Rising!) -->
-  <rect x="47" y="16" width="8" height="36" rx="2" fill="url(#wGrad64)"/>
-  
-  <!-- Annotation Tags -->
-  <g opacity="0.75">
-    <rect x="16" y="24" width="4" height="2.5" rx="0.6" fill="#52C41A"/>
-    <rect x="27" y="32" width="4" height="2.5" rx="0.6" fill="#52C41A"/>
-    <rect x="38" y="20" width="4" height="2.5" rx="0.6" fill="#52C41A"/>
-    <rect x="49" y="12" width="4" height="2.5" rx="0.6" fill="#52C41A"/>
+  <!-- "Wi" Shape -->
+  <!-- W: 4 Tilted Bars -->
+  <g transform="rotate(-8 13 36)">
+    <rect x="10" y="26" width="6" height="20" rx="2" fill="url(#wGrad64)"/>
   </g>
   
-  <!-- Success Arrow -->
-  <path d="M 49 12 L 53 8 L 57 12" 
-        stroke="#52C41A" 
-        stroke-width="2.5" 
-        fill="none" 
-        stroke-linecap="round" 
-        stroke-linejoin="round"/>
+  <g transform="rotate(12 19 40)">
+    <rect x="17" y="34" width="6" height="14" rx="2" fill="url(#wGrad64)"/>
+  </g>
   
-  <!-- Data Points -->
-  <circle cx="18" cy="26" r="2.5" fill="#FFFFFF"/>
-  <circle cx="29" cy="34" r="2.5" fill="#FFFFFF"/>
-  <circle cx="40" cy="22" r="2.5" fill="#FFFFFF"/>
-  <circle cx="51" cy="14" r="2.5" fill="#FFFFFF"/>
+  <g transform="rotate(-10 28 34)">
+    <rect x="26" y="24" width="6" height="20" rx="2" fill="url(#wGrad64)"/>
+  </g>
   
-  <!-- Growth Trend Line -->
-  <path d="M 18 26 L 29 34 L 40 22 L 51 14" 
+  <g transform="rotate(8 37 30)">
+    <rect x="35" y="20" width="6" height="24" rx="2" fill="url(#wGrad64)"/>
+  </g>
+  
+  <!-- i: Straight bar + red dot -->
+  <rect x="46" y="14" width="6" height="30" rx="2" fill="url(#wGrad64)"/>
+  <circle cx="49" cy="10" r="3" fill="#FF4D4F"/>
+  
+  <!-- Wave Line -->
+  <path d="M 13 36 Q 19 42 25 38 T 38 28 Q 43 24 49 14" 
         stroke="#FFFFFF" 
-        stroke-width="2" 
+        stroke-width="1.8" 
         fill="none" 
         opacity="0.6"
-        stroke-linecap="round"
+        stroke-linecap="round"/>
+  
+  <!-- Data Points -->
+  <circle cx="13" cy="36" r="2" fill="#FFFFFF"/>
+  <circle cx="25" cy="40" r="2" fill="#FFFFFF"/>
+  <circle cx="29" cy="34" r="2" fill="#FFFFFF"/>
+  <circle cx="38" cy="30" r="2" fill="#FFFFFF"/>
+  <circle cx="49" cy="22" r="2" fill="#FFFFFF"/>
+  
+  <!-- Arrow -->
+  <path d="M 47 10 L 51 6 L 55 10" 
+        stroke="#52C41A" 
+        stroke-width="2" 
+        fill="none" 
+        stroke-linecap="round" 
         stroke-linejoin="round"/>
 </svg>

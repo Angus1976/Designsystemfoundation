@@ -16,53 +16,57 @@
   <!-- Background -->
   <circle cx="64" cy="64" r="56" fill="url(#bgGrad128)"/>
 
-  <!-- W Shape - 4 Bars -->
+  <!-- "Wi" Shape -->
   <g filter="url(#shadow128)">
-    <!-- Bar 1 (Medium) -->
-    <rect x="28" y="56" width="16" height="48" rx="4" fill="url(#wGrad128)"/>
+    <!-- W: 4 Tilted Bars -->
+    <g transform="rotate(-8 26 72)">
+      <rect x="20" y="52" width="12" height="40" rx="4" fill="url(#wGrad128)"/>
+    </g>
     
-    <!-- Bar 2 (Lowest - W valley) -->
-    <rect x="50" y="72" width="16" height="32" rx="4" fill="url(#wGrad128)"/>
+    <g transform="rotate(12 38 80)">
+      <rect x="34" y="68" width="12" height="28" rx="4" fill="url(#wGrad128)"/>
+    </g>
     
-    <!-- Bar 3 (Medium-High) -->
-    <rect x="72" y="48" width="16" height="56" rx="4" fill="url(#wGrad128)"/>
+    <g transform="rotate(-10 56 68)">
+      <rect x="52" y="48" width="12" height="40" rx="4" fill="url(#wGrad128)"/>
+    </g>
     
-    <!-- Bar 4 (Highest - Rising!) -->
-    <rect x="94" y="32" width="16" height="72" rx="4" fill="url(#wGrad128)"/>
+    <g transform="rotate(8 74 60)">
+      <rect x="70" y="40" width="12" height="48" rx="4" fill="url(#wGrad128)"/>
+    </g>
+    
+    <!-- i: Straight bar + red dot -->
+    <rect x="92" y="28" width="12" height="60" rx="4" fill="url(#wGrad128)"/>
   </g>
   
-  <!-- Annotation Tags -->
-  <g opacity="0.8">
-    <rect x="32" y="48" width="8" height="5" rx="1.5" fill="#52C41A"/>
-    <rect x="54" y="64" width="8" height="5" rx="1.5" fill="#52C41A"/>
-    <rect x="76" y="40" width="8" height="5" rx="1.5" fill="#52C41A"/>
-    <rect x="98" y="24" width="8" height="5" rx="1.5" fill="#52C41A"/>
+  <!-- Red Dot for "i" -->
+  <circle cx="98" cy="20" r="6" fill="#FF4D4F" filter="url(#shadow128)"/>
+  
+  <!-- Wave Line -->
+  <path d="M 26 72 Q 38 84 50 76 T 76 60 Q 86 52 98 28" 
+        stroke="#FFFFFF" 
+        stroke-width="3" 
+        fill="none" 
+        opacity="0.6"
+        stroke-linecap="round"/>
+  
+  <!-- Data Points -->
+  <g filter="url(#shadow128)">
+    <circle cx="26" cy="72" r="4" fill="#FFFFFF"/>
+    <circle cx="50" cy="80" r="4" fill="#FFFFFF"/>
+    <circle cx="58" cy="68" r="4" fill="#FFFFFF"/>
+    <circle cx="76" cy="60" r="4" fill="#FFFFFF"/>
+    <circle cx="98" cy="44" r="4" fill="#FFFFFF"/>
   </g>
   
-  <!-- Success Arrow -->
-  <path d="M 98 24 L 106 16 L 114 24" 
+  <!-- Arrow -->
+  <path d="M 94 20 L 102 12 L 110 20" 
         stroke="#52C41A" 
         stroke-width="4" 
         fill="none" 
         stroke-linecap="round" 
         stroke-linejoin="round"/>
   
-  <!-- Data Points -->
-  <circle cx="36" cy="52" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
-  <circle cx="58" cy="68" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
-  <circle cx="80" cy="44" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
-  <circle cx="102" cy="28" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
-  
-  <!-- Growth Trend Line -->
-  <path d="M 36 52 L 58 68 L 80 44 L 102 28" 
-        stroke="#FFFFFF" 
-        stroke-width="3" 
-        fill="none" 
-        opacity="0.6"
-        stroke-linecap="round"
-        stroke-linejoin="round"/>
-  
   <!-- Baseline Grid -->
-  <line x1="24" y1="104" x2="114" y2="104" stroke="#1890FF" stroke-width="1" opacity="0.15"/>
-  <line x1="24" y1="88" x2="114" y2="88" stroke="#1890FF" stroke-width="1" opacity="0.1"/>
+  <line x1="16" y1="96" x2="108" y2="96" stroke="#1890FF" stroke-width="1" opacity="0.12"/>
 </svg>
