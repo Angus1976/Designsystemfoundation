@@ -1,39 +1,39 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="metal64" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#E8E8E8;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#C0C0C0;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#A0A0A0;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#F5F5F5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4D4D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8B8B8;stop-opacity:1" />
     </linearGradient>
     
     <linearGradient id="metalSide64" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#888888;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#606060;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#9E9E9E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6E6E6E;stop-opacity:1" />
     </linearGradient>
     
     <linearGradient id="metalInner64" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#303030;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#404040;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2A2A2A;stop-opacity:1" />
     </linearGradient>
     
-    <radialGradient id="energy64" cx="50%" cy="40%">
-      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
-      <stop offset="30%" style="stop-color:#87CEEB;stop-opacity:1" />
-      <stop offset="60%" style="stop-color:#1E90FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" />
+    <radialGradient id="energy64" cx="50%" cy="35%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#E0F7FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5DADE2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2874A6;stop-opacity:1" />
     </radialGradient>
     
     <radialGradient id="glow64" cx="50%" cy="50%">
-      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:0.7" />
-      <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:0" />
+      <stop offset="0%" style="stop-color:#85C1E9;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#3498DB;stop-opacity:0" />
     </radialGradient>
     
     <filter id="shadow64">
-      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.3"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.25"/>
     </filter>
     
     <filter id="glow64F">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -71,11 +71,12 @@
     
   </g>
 
-  <!-- 能量球 -->
+  <!-- 能量球 - 微调后 -->
   <g transform="translate(12, 26)">
-    <circle cx="28.5" cy="-1" r="7" fill="url(#glow64)" filter="url(#glow64F)"/>
-    <circle cx="28.5" cy="-1" r="5" fill="url(#energy64)"/>
-    <circle cx="27" cy="-3" r="1.5" fill="#FFFFFF" opacity="0.8"/>
-    <circle cx="29" cy="0" r="1" fill="#00BFFF" opacity="0.6"/>
+    <circle cx="28.5" cy="-2.5" r="8" fill="url(#glow64)" filter="url(#glow64F)" opacity="0.75"/>
+    <circle cx="28.5" cy="-2.5" r="5.5" fill="url(#energy64)"/>
+    <circle cx="27" cy="-4.5" r="2" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="27.8" cy="-3.5" r="1.2" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="29.5" cy="-1.5" r="1" fill="#AED6F1" opacity="0.7"/>
   </g>
 </svg>

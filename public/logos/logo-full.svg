@@ -1,65 +1,63 @@
 <svg width="280" height="80" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- 金属银色渐变 - 外侧 -->
+    <!-- 优化后的金属渐变 - 更温暖的银色 -->
     <linearGradient id="metalOuter" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#E8E8E8;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#C0C0C0;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#A0A0A0;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#F5F5F5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4D4D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8B8B8;stop-opacity:1" />
     </linearGradient>
     
-    <!-- 金属银色渐变 - 侧面 -->
     <linearGradient id="metalSide" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#888888;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#707070;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#606060;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#9E9E9E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#828282;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6E6E6E;stop-opacity:1" />
     </linearGradient>
     
-    <!-- 金属内壁 - 深色 -->
     <linearGradient id="metalInner" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#303030;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#404040;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2A2A2A;stop-opacity:1" />
     </linearGradient>
     
-    <!-- 蓝色能量球 -->
-    <radialGradient id="energyBall" cx="50%" cy="40%">
-      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
-      <stop offset="30%" style="stop-color:#87CEEB;stop-opacity:1" />
-      <stop offset="60%" style="stop-color:#1E90FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" />
+    <!-- 优化后的蓝色能量球 - 更和谐的蓝色系 -->
+    <radialGradient id="energyBall" cx="50%" cy="35%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#E0F7FF;stop-opacity:1" />
+      <stop offset="45%" style="stop-color:#5DADE2;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#3498DB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2874A6;stop-opacity:1" />
     </radialGradient>
     
-    <!-- 能量球光晕 -->
+    <!-- 能量球光晕 - 柔和发光 -->
     <radialGradient id="energyGlow" cx="50%" cy="50%">
-      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:0.8" />
-      <stop offset="50%" style="stop-color:#1E90FF;stop-opacity:0.4" />
-      <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:0" />
+      <stop offset="0%" style="stop-color:#85C1E9;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#5DADE2;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#3498DB;stop-opacity:0" />
     </radialGradient>
     
-    <!-- 能量纹理 -->
-    <radialGradient id="energyTexture" cx="45%" cy="35%">
-      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.6" />
-      <stop offset="40%" style="stop-color:#00BFFF;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#0066CC;stop-opacity:0" />
+    <!-- 能量纹理 - 内部流动 -->
+    <radialGradient id="energyTexture" cx="40%" cy="30%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.7" />
+      <stop offset="40%" style="stop-color:#AED6F1;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#3498DB;stop-opacity:0" />
     </radialGradient>
     
     <!-- 金属高光 -->
     <linearGradient id="metalHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.5" />
-      <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0" />
-      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0.2" />
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0.3" />
     </linearGradient>
     
-    <!-- 阴影 -->
     <filter id="shadow">
-      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.3"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.25"/>
     </filter>
     
     <filter id="strongShadow">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.35"/>
     </filter>
     
     <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -67,106 +65,84 @@
     </filter>
   </defs>
 
-  <!-- Wi Logo -->
+  <!-- Wi Logo - 保持原形状不变 -->
   <g transform="translate(8, 22)" filter="url(#strongShadow)">
     
-    <!-- W - 第一个柱体 (左侧三角形) -->
+    <!-- W - 第一个柱体 (左侧三角形) - 形状不变 -->
     <g>
-      <!-- 外侧面 - 左 -->
       <path d="M 8 28 L 4 32 L 4 44 L 8 40 Z" fill="url(#metalOuter)"/>
-      <!-- 外侧面 - 右 -->
       <path d="M 18 23 L 22 27 L 22 39 L 18 35 Z" fill="url(#metalOuter)"/>
-      <!-- 外侧面 - 底 -->
       <path d="M 4 44 L 8 40 L 18 35 L 22 39 Z" fill="url(#metalSide)"/>
-      <!-- 外侧面 - 顶 -->
       <path d="M 4 32 L 8 28 L 18 23 L 22 27 Z" fill="url(#metalOuter)"/>
-      
-      <!-- 内壁 -->
       <path d="M 8 30 L 6 32 L 6 42 L 8 40 L 16 35 L 20 37 L 20 27 L 16 25 Z" fill="url(#metalInner)"/>
-      
-      <!-- 高光 -->
-      <path d="M 8 28 L 18 23 L 18 26 L 8 31 Z" fill="url(#metalHighlight)" opacity="0.4"/>
+      <path d="M 8 28 L 18 23 L 18 26 L 8 31 Z" fill="url(#metalHighlight)" opacity="0.5"/>
     </g>
     
-    <!-- W - 第二个柱体 (右侧三角形，M形) -->
+    <!-- W - 第二个柱体 (右侧三角形) - 形状不变 -->
     <g>
-      <!-- 外侧面 - 左 -->
       <path d="M 24 27 L 20 31 L 20 43 L 24 39 Z" fill="url(#metalOuter)"/>
-      <!-- 外侧面 - 右 -->
       <path d="M 38 23 L 42 27 L 42 39 L 38 35 Z" fill="url(#metalOuter)"/>
-      <!-- 外侧面 - 底 -->
       <path d="M 20 43 L 24 39 L 38 35 L 42 39 Z" fill="url(#metalSide)"/>
-      <!-- 外侧面 - 顶 -->
       <path d="M 20 31 L 24 27 L 38 23 L 42 27 Z" fill="url(#metalOuter)"/>
-      
-      <!-- 内壁 -->
       <path d="M 24 29 L 22 31 L 22 41 L 24 39 L 36 35 L 40 37 L 40 27 L 36 25 Z" fill="url(#metalInner)"/>
-      
-      <!-- 高光 -->
-      <path d="M 24 27 L 38 23 L 38 26 L 24 30 Z" fill="url(#metalHighlight)" opacity="0.4"/>
+      <path d="M 24 27 L 38 23 L 38 26 L 24 30 Z" fill="url(#metalHighlight)" opacity="0.5"/>
     </g>
     
-    <!-- i - 高柱体 -->
+    <!-- i - 高柱体 - 形状不变 -->
     <g>
-      <!-- 外侧面 - 前 -->
       <path d="M 52 8 L 52 38 L 56 34 L 56 4 Z" fill="url(#metalOuter)"/>
-      <!-- 外侧面 - 右 -->
       <path d="M 56 4 L 62 8 L 62 38 L 56 34 Z" fill="url(#metalSide)"/>
-      <!-- 外侧面 - 顶 -->
       <path d="M 52 8 L 56 4 L 62 8 L 58 12 Z" fill="url(#metalOuter)"/>
-      <!-- 外侧面 - 底 -->
       <path d="M 52 38 L 56 34 L 62 38 L 58 42 Z" fill="url(#metalSide)"/>
-      
-      <!-- 内壁 -->
       <rect x="54" y="10" width="4" height="24" fill="url(#metalInner)"/>
-      
-      <!-- 高光 -->
-      <path d="M 52 8 L 56 4 L 56 6 L 52 10 Z" fill="url(#metalHighlight)" opacity="0.5"/>
-      <rect x="52.5" y="10" width="1" height="26" fill="url(#metalHighlight)" opacity="0.3"/>
+      <path d="M 52 8 L 56 4 L 56 6 L 52 10 Z" fill="url(#metalHighlight)" opacity="0.6"/>
+      <rect x="52.5" y="10" width="1" height="26" fill="url(#metalHighlight)" opacity="0.4"/>
     </g>
     
   </g>
 
-  <!-- 能量球 (蓝色发光球体) -->
+  <!-- 能量球 - 微调大小和位置，优化色彩 -->
   <g transform="translate(8, 22)">
-    <!-- 外层光晕 -->
-    <circle cx="57" cy="-6" r="12" fill="url(#energyGlow)" filter="url(#glow)">
-      <animate attributeName="r" values="12;14;12" dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0.8;0.6" dur="3s" repeatCount="indefinite"/>
+    <!-- 外层光晕 - 稍大，更柔和 -->
+    <circle cx="57" cy="-8" r="14" fill="url(#energyGlow)" filter="url(#glow)" opacity="0.8">
+      <animate attributeName="r" values="14;16;14" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="3s" repeatCount="indefinite"/>
     </circle>
     
-    <!-- 主球体 -->
-    <circle cx="57" cy="-6" r="8" fill="url(#energyBall)">
-      <animate attributeName="r" values="8;8.5;8" dur="2s" repeatCount="indefinite"/>
+    <!-- 主球体 - 调整到更和谐的大小 -->
+    <circle cx="57" cy="-8" r="9" fill="url(#energyBall)">
+      <animate attributeName="r" values="9;9.5;9" dur="2.5s" repeatCount="indefinite"/>
     </circle>
     
     <!-- 能量纹理层1 -->
-    <ellipse cx="55" cy="-8" rx="5" ry="4" fill="url(#energyTexture)" opacity="0.7">
-      <animateTransform attributeName="transform" type="rotate" from="0 57 -6" to="360 57 -6" dur="8s" repeatCount="indefinite"/>
+    <ellipse cx="54.5" cy="-10.5" rx="6" ry="5" fill="url(#energyTexture)" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="0 57 -8" to="360 57 -8" dur="8s" repeatCount="indefinite"/>
     </ellipse>
     
     <!-- 能量纹理层2 -->
-    <ellipse cx="59" cy="-5" rx="4" ry="5" fill="url(#energyTexture)" opacity="0.5">
-      <animateTransform attributeName="transform" type="rotate" from="0 57 -6" to="-360 57 -6" dur="10s" repeatCount="indefinite"/>
+    <ellipse cx="59" cy="-6" rx="5" ry="6" fill="url(#energyTexture)" opacity="0.4">
+      <animateTransform attributeName="transform" type="rotate" from="0 57 -8" to="-360 57 -8" dur="10s" repeatCount="indefinite"/>
     </ellipse>
     
-    <!-- 高光点 -->
-    <circle cx="55" cy="-9" r="2.5" fill="#FFFFFF" opacity="0.8"/>
-    <circle cx="56" cy="-8" r="1.5" fill="#FFFFFF" opacity="0.6"/>
+    <!-- 高光点 - 更自然 -->
+    <circle cx="54" cy="-11" r="3" fill="#FFFFFF" opacity="0.9">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="55.5" cy="-9.5" r="1.8" fill="#FFFFFF" opacity="0.7"/>
     
-    <!-- 流动光斑 -->
-    <circle cx="58" cy="-4" r="1.5" fill="#00BFFF" opacity="0.6">
-      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
+    <!-- 次高光 -->
+    <circle cx="59" cy="-6" r="1.5" fill="#AED6F1" opacity="0.7">
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.5s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- 品牌文字 -->
+  <!-- 品牌文字 - 优化颜色 -->
   <g>
     <text x="88" y="38" 
           font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
           font-size="20" 
           font-weight="700" 
-          fill="#2C3E50"
+          fill="#34495E"
           letter-spacing="1">
       问视间
     </text>
@@ -175,7 +151,7 @@
           font-family="Arial, Helvetica, sans-serif" 
           font-size="13" 
           font-weight="700" 
-          fill="#5A6C7D"
+          fill="#5D6D7E"
           letter-spacing="2">
       WINSAI
     </text>
@@ -185,8 +161,8 @@
     <text x="152" y="56" 
           font-family="PingFang SC, Microsoft YaHei, sans-serif" 
           font-size="10" 
-          fill="#7A8A9A" 
-          opacity="0.75">
+          fill="#85929E" 
+          opacity="0.8">
       数据友好 · 智赢未来
     </text>
   </g>

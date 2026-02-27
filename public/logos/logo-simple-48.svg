@@ -1,18 +1,18 @@
 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGrad48" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#3A3A3A;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#4A4A4A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2A2A2A;stop-opacity:1" />
     </linearGradient>
     
-    <radialGradient id="energySimple48" cx="50%" cy="40%">
-      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
-      <stop offset="50%" style="stop-color:#1E90FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" />
+    <radialGradient id="energySimple48" cx="50%" cy="35%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#5DADE2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2874A6;stop-opacity:1" />
     </radialGradient>
     
     <filter id="glow48">
-      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -25,16 +25,17 @@
 
   <!-- W - 简化线条 -->
   <g opacity="0.95">
-    <path d="M 8 28 L 6 30 L 6 36 L 8 34 L 12 31 L 14 32 L 14 26 L 12 25 Z" fill="#C0C0C0"/>
-    <path d="M 15 27 L 13 29 L 13 35 L 15 33 L 21 30 L 23 31 L 23 25 L 21 24 Z" fill="#C0C0C0"/>
+    <path d="M 8 28 L 6 30 L 6 36 L 8 34 L 12 31 L 14 32 L 14 26 L 12 25 Z" fill="#D4D4D4"/>
+    <path d="M 15 27 L 13 29 L 13 35 L 15 33 L 21 30 L 23 31 L 23 25 L 21 24 Z" fill="#D4D4D4"/>
   </g>
   
   <!-- i - 高柱 -->
-  <rect x="29" y="16" width="4" height="20" rx="0.5" fill="#C0C0C0" opacity="0.95"/>
+  <rect x="29" y="16" width="4" height="20" rx="0.5" fill="#D4D4D4" opacity="0.95"/>
   
-  <!-- 能量球 -->
+  <!-- 能量球 - 微调位置 -->
   <g filter="url(#glow48)">
-    <circle cx="31" cy="12" r="4" fill="url(#energySimple48)"/>
-    <circle cx="30" cy="10.5" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="31" cy="11" r="4.5" fill="url(#energySimple48)"/>
+    <circle cx="29.8" cy="9.5" r="1.8" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="32" cy="12" r="1" fill="#AED6F1" opacity="0.7"/>
   </g>
 </svg>
