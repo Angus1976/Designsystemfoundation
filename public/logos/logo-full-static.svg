@@ -1,73 +1,76 @@
 <svg width="280" height="80" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="mainGradStatic" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#2E5FE8;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#722ED1;stop-opacity:1" />
+    <!-- 专业深蓝渐变 -->
+    <linearGradient id="professionalGradStatic" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0B2847;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1890FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#597EF7;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="glowBgStatic" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.15" />
-      <stop offset="100%" style="stop-color:#722ED1;stop-opacity:0.08" />
+    
+    <linearGradient id="topFaceStatic" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#40A9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1890FF;stop-opacity:1" />
     </linearGradient>
-    <filter id="glowStatic">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    
+    <linearGradient id="leftFaceStatic" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0B2847;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1677D9;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="rightFaceStatic" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1677D9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#597EF7;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="shadowStatic">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.2"/>
     </filter>
   </defs>
 
-  <!-- Logo Icon: "Wi" (Static) -->
-  <g transform="translate(8, 16)">
-    <!-- Background -->
-    <circle cx="32" cy="24" r="30" fill="url(#glowBgStatic)" opacity="0.4"/>
+  <!-- Logo Icon: Geometric "Wi" -->
+  <g transform="translate(8, 18)" filter="url(#shadowStatic)">
     
-    <!-- "W" - 3 strokes -->
-    <path d="M 12 14 L 18 36" 
-          stroke="url(#mainGradStatic)" 
-          stroke-width="7" 
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          fill="none"
-          filter="url(#glowStatic)"/>
+    <!-- W - First Bar -->
+    <g>
+      <path d="M 8 20 L 14 16 L 14 26 L 8 30 Z" fill="url(#topFaceStatic)"/>
+      <path d="M 8 20 L 8 30 L 12 36 L 12 26 Z" fill="url(#leftFaceStatic)"/>
+      <path d="M 14 16 L 14 26 L 18 32 L 18 22 Z" fill="url(#rightFaceStatic)"/>
+    </g>
     
-    <path d="M 18 36 L 26 22 L 34 36" 
-          stroke="url(#mainGradStatic)" 
-          stroke-width="7" 
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          fill="none"
-          filter="url(#glowStatic)"/>
+    <!-- W - Second Bar -->
+    <g>
+      <path d="M 20 30 L 26 26 L 26 32 L 20 36 Z" fill="url(#topFaceStatic)"/>
+      <path d="M 20 30 L 20 36 L 24 40 L 24 34 Z" fill="url(#leftFaceStatic)"/>
+      <path d="M 26 26 L 26 32 L 30 36 L 30 30 Z" fill="url(#rightFaceStatic)"/>
+    </g>
     
-    <path d="M 34 36 L 42 14" 
-          stroke="url(#mainGradStatic)" 
-          stroke-width="7" 
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          fill="none"
-          filter="url(#glowStatic)"/>
+    <!-- W - Third Bar -->
+    <g>
+      <path d="M 32 22 L 38 18 L 38 28 L 32 32 Z" fill="url(#topFaceStatic)"/>
+      <path d="M 32 22 L 32 32 L 36 38 L 36 28 Z" fill="url(#leftFaceStatic)"/>
+      <path d="M 38 18 L 38 28 L 42 34 L 42 24 Z" fill="url(#rightFaceStatic)"/>
+    </g>
     
-    <!-- "i" - vertical stroke -->
-    <path d="M 54 10 L 54 44" 
-          stroke="url(#mainGradStatic)" 
-          stroke-width="7" 
-          stroke-linecap="round"
-          fill="none"
-          filter="url(#glowStatic)"/>
+    <!-- i - Vertical Bar -->
+    <g>
+      <path d="M 52 8 L 58 4 L 58 36 L 52 40 Z" fill="url(#topFaceStatic)"/>
+      <path d="M 52 8 L 52 40 L 56 44 L 56 12 Z" fill="url(#leftFaceStatic)"/>
+      <path d="M 58 4 L 58 36 L 62 40 L 62 8 Z" fill="url(#rightFaceStatic)"/>
+    </g>
     
-    <!-- Red dot -->
-    <circle cx="54" cy="2" r="4.5" fill="#FF4D4F" filter="url(#glowStatic)"/>
+    <!-- Red Dot -->
+    <circle cx="55" cy="-2" r="5" fill="#FF4D4F"/>
     
-    <!-- Data points -->
-    <circle cx="15" cy="25" r="2" fill="#52C41A" opacity="0.7"/>
-    <circle cx="22" cy="29" r="2" fill="#52C41A" opacity="0.7"/>
-    <circle cx="30" cy="29" r="2" fill="#52C41A" opacity="0.7"/>
-    <circle cx="38" cy="25" r="2" fill="#52C41A" opacity="0.7"/>
-    <circle cx="54" cy="27" r="2" fill="#52C41A" opacity="0.7"/>
+    <!-- Data line -->
+    <path d="M 11 28 Q 24 34 37 28 Q 50 22 55 12" 
+          stroke="#52C41A" 
+          stroke-width="1.5" 
+          fill="none" 
+          opacity="0.5"
+          stroke-dasharray="3,3"/>
     
     <!-- Arrow -->
-    <path d="M 52 -1 L 56 -5 L 60 -1" 
+    <path d="M 53 -5 L 57 -9 L 61 -5" 
           stroke="#52C41A" 
           stroke-width="2.5" 
           fill="none" 
@@ -81,7 +84,7 @@
           font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
           font-size="20" 
           font-weight="700" 
-          fill="currentColor"
+          fill="#0B2847"
           letter-spacing="1">
       问视间
     </text>
@@ -100,8 +103,8 @@
     <text x="152" y="52" 
           font-family="PingFang SC, Microsoft YaHei, sans-serif" 
           font-size="10" 
-          fill="currentColor" 
-          opacity="0.65">
+          fill="#5A5A5A" 
+          opacity="0.75">
       数据友好 · 智赢未来
     </text>
   </g>

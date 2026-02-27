@@ -1,50 +1,35 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="gradFav" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#2E5FE8;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#722ED1;stop-opacity:1" />
+    <linearGradient id="gradFavPro" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B2847;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1890FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#597EF7;stop-opacity:1" />
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="32" height="32" rx="7" fill="url(#gradFav)"/>
+  <rect width="32" height="32" rx="7" fill="url(#gradFavPro)"/>
 
-  <!-- "Wi" in white -->
+  <!-- "Wi" - Simplified bars -->
   <g opacity="0.95">
-    <!-- W: 3 strokes -->
-    <path d="M 6 9 L 8 18" 
-          stroke="#FFFFFF" 
-          stroke-width="2.5" 
-          stroke-linecap="round"
-          fill="none"/>
+    <!-- W - Bar 1 -->
+    <rect x="4" y="14" width="3" height="8" rx="0.8" fill="#FFFFFF"/>
     
-    <path d="M 8 18 L 11 12 L 14 18" 
-          stroke="#FFFFFF" 
-          stroke-width="2.5" 
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          fill="none"/>
+    <!-- W - Bar 2 -->
+    <rect x="9" y="16" width="3" height="6" rx="0.8" fill="#FFFFFF"/>
     
-    <path d="M 14 18 L 17 9" 
-          stroke="#FFFFFF" 
-          stroke-width="2.5" 
-          stroke-linecap="round"
-          fill="none"/>
+    <!-- W - Bar 3 -->
+    <rect x="14" y="15" width="3" height="7" rx="0.8" fill="#FFFFFF"/>
     
-    <!-- i: vertical -->
-    <path d="M 23 8 L 23 21" 
-          stroke="#FFFFFF" 
-          stroke-width="2.5" 
-          stroke-linecap="round"
-          fill="none"/>
+    <!-- i - Bar 4 -->
+    <rect x="21" y="10" width="3" height="14" rx="0.8" fill="#FFFFFF"/>
   </g>
   
-  <!-- Red dot -->
-  <circle cx="23" cy="4.5" r="2" fill="#FF4D4F"/>
+  <!-- Red Dot -->
+  <circle cx="22.5" cy="6" r="2" fill="#FF4D4F"/>
   
   <!-- Arrow -->
-  <path d="M 21.5 4 L 24 1.5 L 26.5 4" 
+  <path d="M 21 5.5 L 23.5 3 L 26 5.5" 
         stroke="#FFFFFF" 
         stroke-width="1.5" 
         fill="none" 

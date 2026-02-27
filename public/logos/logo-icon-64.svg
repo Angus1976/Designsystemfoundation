@@ -1,72 +1,67 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad64" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#2E5FE8;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#722ED1;stop-opacity:1" />
+    <linearGradient id="top64" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#40A9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1890FF;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="bg64" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.12" />
-      <stop offset="100%" style="stop-color:#722ED1;stop-opacity:0.06" />
+    
+    <linearGradient id="left64" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0B2847;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1677D9;stop-opacity:1" />
     </linearGradient>
-    <filter id="glow64">
-      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    
+    <linearGradient id="right64" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1677D9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#597EF7;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="shadow64">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-opacity="0.2"/>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <circle cx="32" cy="32" r="28" fill="url(#bg64)"/>
+  <!-- Background subtle -->
+  <circle cx="32" cy="32" r="28" fill="#F0F5FF" opacity="0.5"/>
 
-  <!-- "Wi" Shape -->
-  <!-- W: 3 strokes -->
-  <path d="M 14 18 L 18 36" 
-        stroke="url(#grad64)" 
-        stroke-width="5" 
-        stroke-linecap="round"
-        fill="none"
-        filter="url(#glow64)"/>
-  
-  <path d="M 18 36 L 24 24 L 30 36" 
-        stroke="url(#grad64)" 
-        stroke-width="5" 
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        fill="none"
-        filter="url(#glow64)"/>
-  
-  <path d="M 30 36 L 36 18" 
-        stroke="url(#grad64)" 
-        stroke-width="5" 
-        stroke-linecap="round"
-        fill="none"
-        filter="url(#glow64)"/>
-  
-  <!-- i: vertical + dot -->
-  <path d="M 46 16 L 46 42" 
-        stroke="url(#grad64)" 
-        stroke-width="5" 
-        stroke-linecap="round"
-        fill="none"
-        filter="url(#glow64)"/>
-  
-  <circle cx="46" cy="10" r="3.5" fill="#FF4D4F" filter="url(#glow64)"/>
-  
-  <!-- Data points -->
-  <circle cx="16" cy="27" r="1.5" fill="#52C41A" opacity="0.7"/>
-  <circle cx="21" cy="30" r="1.5" fill="#52C41A" opacity="0.7"/>
-  <circle cx="27" cy="30" r="1.5" fill="#52C41A" opacity="0.7"/>
-  <circle cx="33" cy="27" r="1.5" fill="#52C41A" opacity="0.7"/>
-  <circle cx="46" cy="29" r="1.5" fill="#52C41A" opacity="0.7"/>
-  
-  <!-- Arrow -->
-  <path d="M 44 8 L 47 5 L 50 8" 
-        stroke="#52C41A" 
-        stroke-width="2" 
-        fill="none" 
-        stroke-linecap="round" 
-        stroke-linejoin="round"/>
+  <g transform="translate(10, 20)" filter="url(#shadow64)">
+    
+    <!-- W - Bar 1 -->
+    <g>
+      <path d="M 2 14 L 6 12 L 6 20 L 2 22 Z" fill="url(#top64)"/>
+      <path d="M 2 14 L 2 22 L 4 26 L 4 18 Z" fill="url(#left64)"/>
+      <path d="M 6 12 L 6 20 L 8 24 L 8 16 Z" fill="url(#right64)"/>
+    </g>
+    
+    <!-- W - Bar 2 -->
+    <g>
+      <path d="M 10 20 L 14 18 L 14 22 L 10 24 Z" fill="url(#top64)"/>
+      <path d="M 10 20 L 10 24 L 12 26 L 12 22 Z" fill="url(#left64)"/>
+      <path d="M 14 18 L 14 22 L 16 24 L 16 20 Z" fill="url(#right64)"/>
+    </g>
+    
+    <!-- W - Bar 3 -->
+    <g>
+      <path d="M 18 15 L 22 13 L 22 21 L 18 23 Z" fill="url(#top64)"/>
+      <path d="M 18 15 L 18 23 L 20 27 L 20 19 Z" fill="url(#left64)"/>
+      <path d="M 22 13 L 22 21 L 24 25 L 24 17 Z" fill="url(#right64)"/>
+    </g>
+    
+    <!-- i - Bar 4 -->
+    <g>
+      <path d="M 32 6 L 36 4 L 36 28 L 32 30 Z" fill="url(#top64)"/>
+      <path d="M 32 6 L 32 30 L 34 32 L 34 8 Z" fill="url(#left64)"/>
+      <path d="M 36 4 L 36 28 L 38 30 L 38 6 Z" fill="url(#right64)"/>
+    </g>
+    
+    <!-- Red Dot -->
+    <circle cx="34" cy="0" r="3.5" fill="#FF4D4F"/>
+    
+    <!-- Arrow -->
+    <path d="M 32 -2 L 35 -5 L 38 -2" 
+          stroke="#52C41A" 
+          stroke-width="2" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+  </g>
 </svg>

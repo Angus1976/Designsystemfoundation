@@ -1,122 +1,120 @@
 <svg width="280" height="80" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="mainGradient" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#2E5FE8;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#722ED1;stop-opacity:1" />
+    <!-- 专业深蓝渐变 - 数据标注AI公司 -->
+    <linearGradient id="professionalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0B2847;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1890FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#597EF7;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="glowBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.15" />
-      <stop offset="100%" style="stop-color:#722ED1;stop-opacity:0.08" />
+    
+    <!-- 立体效果渐变 - 上表面 -->
+    <linearGradient id="topFace" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#40A9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1890FF;stop-opacity:1" />
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    
+    <!-- 立体效果渐变 - 左侧面 -->
+    <linearGradient id="leftFace" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0B2847;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1677D9;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 立体效果渐变 - 右侧面 -->
+    <linearGradient id="rightFace" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1677D9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#597EF7;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.2"/>
     </filter>
   </defs>
 
-  <!-- Logo Icon: "Wi" based on hand-drawn sketch -->
-  <g transform="translate(8, 16)">
-    <!-- Background subtle glow -->
-    <circle cx="32" cy="24" r="30" fill="url(#glowBg)" opacity="0.4"/>
+  <!-- Logo Icon: Geometric "Wi" -->
+  <g transform="translate(8, 18)" filter="url(#shadow)">
     
-    <!-- "W" - 3 strokes forming W shape -->
-    <!-- Stroke 1: Left downward -->
-    <path d="M 12 14 L 18 36" 
-          stroke="url(#mainGradient)" 
-          stroke-width="7" 
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          fill="none"
-          filter="url(#glow)">
-      <animate attributeName="stroke-width" values="7;8;7" dur="2s" repeatCount="indefinite"/>
-    </path>
-    
-    <!-- Stroke 2: Middle V (valley) -->
-    <path d="M 18 36 L 26 22 L 34 36" 
-          stroke="url(#mainGradient)" 
-          stroke-width="7" 
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          fill="none"
-          filter="url(#glow)">
-      <animate attributeName="stroke-width" values="7;8;7" dur="2s" begin="0.3s" repeatCount="indefinite"/>
-    </path>
-    
-    <!-- Stroke 3: Right upward -->
-    <path d="M 34 36 L 42 14" 
-          stroke="url(#mainGradient)" 
-          stroke-width="7" 
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          fill="none"
-          filter="url(#glow)">
-      <animate attributeName="stroke-width" values="7;8;7" dur="2s" begin="0.6s" repeatCount="indefinite"/>
-    </path>
-    
-    <!-- "i" - 2 strokes forming i -->
-    <!-- Stroke 4: i body (tall vertical) -->
-    <path d="M 54 10 L 54 44" 
-          stroke="url(#mainGradient)" 
-          stroke-width="7" 
-          stroke-linecap="round"
-          fill="none"
-          filter="url(#glow)">
-      <animate attributeName="stroke-width" values="7;8;7" dur="2s" begin="0.9s" repeatCount="indefinite"/>
-    </path>
-    
-    <!-- Red dot on top of "i" - THE KEY ELEMENT -->
-    <circle cx="54" cy="2" r="4.5" fill="#FF4D4F" filter="url(#glow)">
-      <animate attributeName="r" values="4.5;5.5;4.5" dur="2s" begin="0.9s" repeatCount="indefinite"/>
-      <animate attributeName="cy" values="2;0;2" dur="2s" begin="0.9s" repeatCount="indefinite"/>
-    </circle>
-    
-    <!-- Data flow particles (AI element) -->
-    <g opacity="0.7">
-      <circle cx="15" cy="25" r="2" fill="#52C41A">
-        <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="22" cy="29" r="2" fill="#52C41A">
-        <animate attributeName="opacity" values="0;1;0" dur="3s" begin="0.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="30" cy="29" r="2" fill="#52C41A">
-        <animate attributeName="opacity" values="0;1;0" dur="3s" begin="1s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="38" cy="25" r="2" fill="#52C41A">
-        <animate attributeName="opacity" values="0;1;0" dur="3s" begin="1.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="54" cy="27" r="2" fill="#52C41A">
-        <animate attributeName="opacity" values="0;1;0" dur="3s" begin="2s" repeatCount="indefinite"/>
-      </circle>
+    <!-- W - First Bar (Left) -->
+    <g>
+      <!-- Top face -->
+      <path d="M 8 20 L 14 16 L 14 26 L 8 30 Z" fill="url(#topFace)"/>
+      <!-- Left face -->
+      <path d="M 8 20 L 8 30 L 12 36 L 12 26 Z" fill="url(#leftFace)"/>
+      <!-- Right face -->
+      <path d="M 14 16 L 14 26 L 18 32 L 18 22 Z" fill="url(#rightFace)"/>
+      <animate attributeName="opacity" values="1;0.95;1" dur="2s" repeatCount="indefinite"/>
     </g>
     
-    <!-- Upward arrow (success trend) -->
-    <path d="M 52 -1 L 56 -5 L 60 -1" 
+    <!-- W - Second Bar (Valley - shorter) -->
+    <g>
+      <!-- Top face -->
+      <path d="M 20 30 L 26 26 L 26 32 L 20 36 Z" fill="url(#topFace)"/>
+      <!-- Left face -->
+      <path d="M 20 30 L 20 36 L 24 40 L 24 34 Z" fill="url(#leftFace)"/>
+      <!-- Right face -->
+      <path d="M 26 26 L 26 32 L 30 36 L 30 30 Z" fill="url(#rightFace)"/>
+      <animate attributeName="opacity" values="1;0.95;1" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+    </g>
+    
+    <!-- W - Third Bar (Middle-high) -->
+    <g>
+      <!-- Top face -->
+      <path d="M 32 22 L 38 18 L 38 28 L 32 32 Z" fill="url(#topFace)"/>
+      <!-- Left face -->
+      <path d="M 32 22 L 32 32 L 36 38 L 36 28 Z" fill="url(#leftFace)"/>
+      <!-- Right face -->
+      <path d="M 38 18 L 38 28 L 42 34 L 42 24 Z" fill="url(#rightFace)"/>
+      <animate attributeName="opacity" values="1;0.95;1" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </g>
+    
+    <!-- i - Vertical Bar (Tallest) -->
+    <g>
+      <!-- Top face -->
+      <path d="M 52 8 L 58 4 L 58 36 L 52 40 Z" fill="url(#topFace)"/>
+      <!-- Left face -->
+      <path d="M 52 8 L 52 40 L 56 44 L 56 12 Z" fill="url(#leftFace)"/>
+      <!-- Right face -->
+      <path d="M 58 4 L 58 36 L 62 40 L 62 8 Z" fill="url(#rightFace)"/>
+      <animate attributeName="opacity" values="1;0.95;1" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+    </g>
+    
+    <!-- Red Dot - Insight Point -->
+    <circle cx="55" cy="-2" r="5" fill="#FF4D4F">
+      <animate attributeName="r" values="5;6;5" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="-2;-4;-2" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Data flow line -->
+    <path d="M 11 28 Q 24 34 37 28 Q 50 22 55 12" 
+          stroke="#52C41A" 
+          stroke-width="1.5" 
+          fill="none" 
+          opacity="0.5"
+          stroke-dasharray="3,3">
+      <animate attributeName="stroke-dashoffset" from="0" to="24" dur="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Upward Arrow -->
+    <path d="M 53 -5 L 57 -9 L 61 -5" 
           stroke="#52C41A" 
           stroke-width="2.5" 
           fill="none" 
           stroke-linecap="round" 
           stroke-linejoin="round">
-      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.6;1" dur="1.5s" repeatCount="indefinite"/>
     </path>
   </g>
 
   <!-- Brand Text -->
   <g>
-    <!-- Chinese Name: 问视间 -->
     <text x="88" y="34" 
           font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
           font-size="20" 
           font-weight="700" 
-          fill="currentColor"
+          fill="#0B2847"
           letter-spacing="1">
       问视间
     </text>
 
-    <!-- English Name: WinsAI -->
     <text x="88" y="52" 
           font-family="Arial, Helvetica, sans-serif" 
           font-size="13" 
@@ -126,15 +124,13 @@
       WINSAI
     </text>
 
-    <!-- Divider -->
     <line x1="145" y1="43" x2="145" y2="52" stroke="currentColor" stroke-width="1" opacity="0.15"/>
 
-    <!-- Tagline -->
     <text x="152" y="52" 
           font-family="PingFang SC, Microsoft YaHei, sans-serif" 
           font-size="10" 
-          fill="currentColor" 
-          opacity="0.65">
+          fill="#5A5A5A" 
+          opacity="0.75">
       数据友好 · 智赢未来
     </text>
   </g>
