@@ -1,67 +1,81 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="top64" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#40A9FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1890FF;stop-opacity:1" />
+    <linearGradient id="metal64" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8E8E8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0A0A0;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="left64" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#0B2847;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1677D9;stop-opacity:1" />
+    <linearGradient id="metalSide64" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#888888;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#606060;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="right64" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1677D9;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#597EF7;stop-opacity:1" />
+    <linearGradient id="metalInner64" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#303030;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
     </linearGradient>
+    
+    <radialGradient id="energy64" cx="50%" cy="40%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="30%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="glow64" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:0" />
+    </radialGradient>
     
     <filter id="shadow64">
-      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-opacity="0.2"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+    
+    <filter id="glow64F">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
   </defs>
 
-  <!-- Background subtle -->
-  <circle cx="32" cy="32" r="28" fill="#F0F5FF" opacity="0.5"/>
+  <g transform="translate(12, 26)" filter="url(#shadow64)">
+    
+    <!-- W柱1 -->
+    <g>
+      <path d="M 3 16 L 1 18 L 1 26 L 3 24 Z" fill="url(#metal64)"/>
+      <path d="M 8 13 L 10 15 L 10 23 L 8 21 Z" fill="url(#metal64)"/>
+      <path d="M 1 26 L 3 24 L 8 21 L 10 23 Z" fill="url(#metalSide64)"/>
+      <path d="M 1 18 L 3 16 L 8 13 L 10 15 Z" fill="url(#metal64)"/>
+      <path d="M 3.5 17 L 2 18.5 L 2 24.5 L 3.5 23 L 7.5 20.5 L 9 21.5 L 9 15.5 L 7.5 14.5 Z" fill="url(#metalInner64)"/>
+    </g>
+    
+    <!-- W柱2 -->
+    <g>
+      <path d="M 11 15 L 9 17 L 9 25 L 11 23 Z" fill="url(#metal64)"/>
+      <path d="M 18 13 L 20 15 L 20 23 L 18 21 Z" fill="url(#metal64)"/>
+      <path d="M 9 25 L 11 23 L 18 21 L 20 23 Z" fill="url(#metalSide64)"/>
+      <path d="M 9 17 L 11 15 L 18 13 L 20 15 Z" fill="url(#metal64)"/>
+      <path d="M 11.5 16 L 10 17.5 L 10 23.5 L 11.5 22 L 17.5 20 L 19 21 L 19 15 L 17.5 14 Z" fill="url(#metalInner64)"/>
+    </g>
+    
+    <!-- i柱 -->
+    <g>
+      <path d="M 26 5 L 26 22 L 28 20 L 28 3 Z" fill="url(#metal64)"/>
+      <path d="M 28 3 L 31 5 L 31 22 L 28 20 Z" fill="url(#metalSide64)"/>
+      <path d="M 26 5 L 28 3 L 31 5 L 29 7 Z" fill="url(#metal64)"/>
+      <rect x="27" y="6" width="2" height="14" fill="url(#metalInner64)"/>
+    </g>
+    
+  </g>
 
-  <g transform="translate(10, 20)" filter="url(#shadow64)">
-    
-    <!-- W - Bar 1 -->
-    <g>
-      <path d="M 2 14 L 6 12 L 6 20 L 2 22 Z" fill="url(#top64)"/>
-      <path d="M 2 14 L 2 22 L 4 26 L 4 18 Z" fill="url(#left64)"/>
-      <path d="M 6 12 L 6 20 L 8 24 L 8 16 Z" fill="url(#right64)"/>
-    </g>
-    
-    <!-- W - Bar 2 -->
-    <g>
-      <path d="M 10 20 L 14 18 L 14 22 L 10 24 Z" fill="url(#top64)"/>
-      <path d="M 10 20 L 10 24 L 12 26 L 12 22 Z" fill="url(#left64)"/>
-      <path d="M 14 18 L 14 22 L 16 24 L 16 20 Z" fill="url(#right64)"/>
-    </g>
-    
-    <!-- W - Bar 3 -->
-    <g>
-      <path d="M 18 15 L 22 13 L 22 21 L 18 23 Z" fill="url(#top64)"/>
-      <path d="M 18 15 L 18 23 L 20 27 L 20 19 Z" fill="url(#left64)"/>
-      <path d="M 22 13 L 22 21 L 24 25 L 24 17 Z" fill="url(#right64)"/>
-    </g>
-    
-    <!-- i - Bar 4 -->
-    <g>
-      <path d="M 32 6 L 36 4 L 36 28 L 32 30 Z" fill="url(#top64)"/>
-      <path d="M 32 6 L 32 30 L 34 32 L 34 8 Z" fill="url(#left64)"/>
-      <path d="M 36 4 L 36 28 L 38 30 L 38 6 Z" fill="url(#right64)"/>
-    </g>
-    
-    <!-- Red Dot -->
-    <circle cx="34" cy="0" r="3.5" fill="#FF4D4F"/>
-    
-    <!-- Arrow -->
-    <path d="M 32 -2 L 35 -5 L 38 -2" 
-          stroke="#52C41A" 
-          stroke-width="2" 
-          fill="none" 
-          stroke-linecap="round" 
-          stroke-linejoin="round"/>
+  <!-- 能量球 -->
+  <g transform="translate(12, 26)">
+    <circle cx="28.5" cy="-1" r="7" fill="url(#glow64)" filter="url(#glow64F)"/>
+    <circle cx="28.5" cy="-1" r="5" fill="url(#energy64)"/>
+    <circle cx="27" cy="-3" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="29" cy="0" r="1" fill="#00BFFF" opacity="0.6"/>
   </g>
 </svg>

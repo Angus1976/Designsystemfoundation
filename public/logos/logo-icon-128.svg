@@ -1,70 +1,92 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="top128" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#40A9FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1890FF;stop-opacity:1" />
+    <linearGradient id="metal128" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8E8E8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0A0A0;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="left128" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#0B2847;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1677D9;stop-opacity:1" />
+    <linearGradient id="metalSide128" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#888888;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#606060;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="right128" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1677D9;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#597EF7;stop-opacity:1" />
+    <linearGradient id="metalInner128" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#303030;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="energy128" cx="50%" cy="40%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="30%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="glow128" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:0" />
+    </radialGradient>
+    
+    <linearGradient id="highlight128" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
     </linearGradient>
     
     <filter id="shadow128">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+    
+    <filter id="glow128F">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <circle cx="64" cy="64" r="56" fill="#F0F5FF" opacity="0.5"/>
-
-  <g transform="translate(20, 40)" filter="url(#shadow128)">
+  <g transform="translate(24, 52)" filter="url(#shadow128)">
     
-    <!-- W - Bar 1 -->
+    <!-- W柱1 -->
     <g>
-      <path d="M 4 28 L 12 24 L 12 40 L 4 44 Z" fill="url(#top128)"/>
-      <path d="M 4 28 L 4 44 L 8 52 L 8 36 Z" fill="url(#left128)"/>
-      <path d="M 12 24 L 12 40 L 16 48 L 16 32 Z" fill="url(#right128)"/>
+      <path d="M 6 32 L 2 36 L 2 52 L 6 48 Z" fill="url(#metal128)"/>
+      <path d="M 16 26 L 20 30 L 20 46 L 16 42 Z" fill="url(#metal128)"/>
+      <path d="M 2 52 L 6 48 L 16 42 L 20 46 Z" fill="url(#metalSide128)"/>
+      <path d="M 2 36 L 6 32 L 16 26 L 20 30 Z" fill="url(#metal128)"/>
+      <path d="M 7 34 L 4 37 L 4 50 L 7 47 L 15 42 L 18 44 L 18 31 L 15 28 Z" fill="url(#metalInner128)"/>
+      <path d="M 6 32 L 16 26 L 16 29 L 6 35 Z" fill="url(#highlight128)" opacity="0.5"/>
     </g>
     
-    <!-- W - Bar 2 -->
+    <!-- W柱2 -->
     <g>
-      <path d="M 20 40 L 28 36 L 28 44 L 20 48 Z" fill="url(#top128)"/>
-      <path d="M 20 40 L 20 48 L 24 52 L 24 44 Z" fill="url(#left128)"/>
-      <path d="M 28 36 L 28 44 L 32 48 L 32 40 Z" fill="url(#right128)"/>
+      <path d="M 22 30 L 18 34 L 18 50 L 22 46 Z" fill="url(#metal128)"/>
+      <path d="M 36 26 L 40 30 L 40 46 L 36 42 Z" fill="url(#metal128)"/>
+      <path d="M 18 50 L 22 46 L 36 42 L 40 46 Z" fill="url(#metalSide128)"/>
+      <path d="M 18 34 L 22 30 L 36 26 L 40 30 Z" fill="url(#metal128)"/>
+      <path d="M 23 32 L 20 35 L 20 48 L 23 45 L 35 41 L 38 43 L 38 30 L 35 27 Z" fill="url(#metalInner128)"/>
+      <path d="M 22 30 L 36 26 L 36 29 L 22 33 Z" fill="url(#highlight128)" opacity="0.5"/>
     </g>
     
-    <!-- W - Bar 3 -->
+    <!-- i柱 -->
     <g>
-      <path d="M 36 30 L 44 26 L 44 42 L 36 46 Z" fill="url(#top128)"/>
-      <path d="M 36 30 L 36 46 L 40 54 L 40 38 Z" fill="url(#left128)"/>
-      <path d="M 44 26 L 44 42 L 48 50 L 48 34 Z" fill="url(#right128)"/>
+      <path d="M 52 10 L 52 44 L 56 40 L 56 6 Z" fill="url(#metal128)"/>
+      <path d="M 56 6 L 62 10 L 62 44 L 56 40 Z" fill="url(#metalSide128)"/>
+      <path d="M 52 10 L 56 6 L 62 10 L 58 14 Z" fill="url(#metal128)"/>
+      <path d="M 52 44 L 56 40 L 62 44 L 58 48 Z" fill="url(#metalSide128)"/>
+      <rect x="54" y="12" width="4" height="28" fill="url(#metalInner128)"/>
+      <path d="M 52 10 L 56 6 L 56 9 L 52 13 Z" fill="url(#highlight128)" opacity="0.6"/>
+      <rect x="52.5" y="13" width="1.5" height="29" fill="url(#highlight128)" opacity="0.3"/>
     </g>
     
-    <!-- i - Bar 4 -->
-    <g>
-      <path d="M 64 12 L 72 8 L 72 56 L 64 60 Z" fill="url(#top128)"/>
-      <path d="M 64 12 L 64 60 L 68 64 L 68 16 Z" fill="url(#left128)"/>
-      <path d="M 72 8 L 72 56 L 76 60 L 76 12 Z" fill="url(#right128)"/>
-    </g>
-    
-    <!-- Red Dot -->
-    <circle cx="68" cy="0" r="7" fill="#FF4D4F"/>
-    
-    <!-- Arrow -->
-    <path d="M 64 -4 L 70 -10 L 76 -4" 
-          stroke="#52C41A" 
-          stroke-width="4" 
-          fill="none" 
-          stroke-linecap="round" 
-          stroke-linejoin="round"/>
   </g>
-  
-  <!-- Baseline -->
-  <line x1="20" y1="105" x2="108" y2="105" stroke="#1890FF" stroke-width="1" opacity="0.1"/>
+
+  <!-- 能量球 -->
+  <g transform="translate(24, 52)">
+    <circle cx="57" cy="-2" r="14" fill="url(#glow128)" filter="url(#glow128F)"/>
+    <circle cx="57" cy="-2" r="10" fill="url(#energy128)"/>
+    <circle cx="54" cy="-6" r="3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="55.5" cy="-4.5" r="2" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="59" cy="0" r="2" fill="#00BFFF" opacity="0.6"/>
+  </g>
 </svg>

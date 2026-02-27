@@ -1,94 +1,110 @@
 <svg width="360" height="72" viewBox="0 0 360 72" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="topH" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#40A9FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1890FF;stop-opacity:1" />
+    <linearGradient id="metalH" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8E8E8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0A0A0;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="leftH" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#0B2847;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1677D9;stop-opacity:1" />
+    <linearGradient id="metalSideH" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#888888;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#606060;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="rightH" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1677D9;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#597EF7;stop-opacity:1" />
+    <linearGradient id="metalInnerH" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#303030;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
     </linearGradient>
+    
+    <radialGradient id="energyH" cx="50%" cy="40%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="30%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="glowH" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:0" />
+    </radialGradient>
     
     <filter id="shadowH">
-      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-opacity="0.2"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-opacity="0.3"/>
+    </filter>
+    
+    <filter id="glowHF">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
   </defs>
 
-  <!-- Logo Icon -->
-  <g transform="translate(8, 16)" filter="url(#shadowH)">
+  <g transform="translate(8, 20)" filter="url(#shadowH)">
     
-    <!-- W - Bar 1 -->
+    <!-- W柱1 -->
     <g>
-      <path d="M 6 16 L 11 14 L 11 22 L 6 24 Z" fill="url(#topH)"/>
-      <path d="M 6 16 L 6 24 L 9 28 L 9 20 Z" fill="url(#leftH)"/>
-      <path d="M 11 14 L 11 22 L 14 26 L 14 18 Z" fill="url(#rightH)"/>
+      <path d="M 6 24 L 3 27 L 3 37 L 6 34 Z" fill="url(#metalH)"/>
+      <path d="M 14 20 L 17 23 L 17 33 L 14 30 Z" fill="url(#metalH)"/>
+      <path d="M 3 37 L 6 34 L 14 30 L 17 33 Z" fill="url(#metalSideH)"/>
+      <path d="M 3 27 L 6 24 L 14 20 L 17 23 Z" fill="url(#metalH)"/>
+      <path d="M 6.5 25 L 4 27.5 L 4 35.5 L 6.5 33 L 13.5 29.5 L 16 31 L 16 23 L 13.5 21 Z" fill="url(#metalInnerH)"/>
     </g>
     
-    <!-- W - Bar 2 -->
+    <!-- W柱2 -->
     <g>
-      <path d="M 16 24 L 21 22 L 21 26 L 16 28 Z" fill="url(#topH)"/>
-      <path d="M 16 24 L 16 28 L 19 30 L 19 26 Z" fill="url(#leftH)"/>
-      <path d="M 21 22 L 21 26 L 24 28 L 24 24 Z" fill="url(#rightH)"/>
+      <path d="M 19 23 L 16 26 L 16 36 L 19 33 Z" fill="url(#metalH)"/>
+      <path d="M 30 20 L 33 23 L 33 33 L 30 30 Z" fill="url(#metalH)"/>
+      <path d="M 16 36 L 19 33 L 30 30 L 33 33 Z" fill="url(#metalSideH)"/>
+      <path d="M 16 26 L 19 23 L 30 20 L 33 23 Z" fill="url(#metalH)"/>
+      <path d="M 19.5 24 L 17 26.5 L 17 34.5 L 19.5 32 L 29.5 29 L 32 30.5 L 32 22.5 L 29.5 21 Z" fill="url(#metalInnerH)"/>
     </g>
     
-    <!-- W - Bar 3 -->
+    <!-- i柱 -->
     <g>
-      <path d="M 26 18 L 31 16 L 31 24 L 26 26 Z" fill="url(#topH)"/>
-      <path d="M 26 18 L 26 26 L 29 30 L 29 22 Z" fill="url(#leftH)"/>
-      <path d="M 31 16 L 31 24 L 34 28 L 34 20 Z" fill="url(#rightH)"/>
+      <path d="M 42 8 L 42 32 L 45 29 L 45 5 Z" fill="url(#metalH)"/>
+      <path d="M 45 5 L 50 8 L 50 32 L 45 29 Z" fill="url(#metalSideH)"/>
+      <path d="M 42 8 L 45 5 L 50 8 L 47 11 Z" fill="url(#metalH)"/>
+      <rect x="43.5" y="9" width="3" height="20" fill="url(#metalInnerH)"/>
     </g>
     
-    <!-- i - Bar 4 -->
-    <g>
-      <path d="M 42 8 L 47 6 L 47 32 L 42 34 Z" fill="url(#topH)"/>
-      <path d="M 42 8 L 42 34 L 45 36 L 45 10 Z" fill="url(#leftH)"/>
-      <path d="M 47 6 L 47 32 L 50 34 L 50 8 Z" fill="url(#rightH)"/>
-    </g>
-    
-    <!-- Red Dot -->
-    <circle cx="44.5" cy="2" r="4" fill="#FF4D4F"/>
-    
-    <!-- Arrow -->
-    <path d="M 42 0 L 46 -4 L 50 0" 
-          stroke="#52C41A" 
-          stroke-width="2.5" 
-          fill="none" 
-          stroke-linecap="round" 
-          stroke-linejoin="round"/>
   </g>
 
-  <!-- Brand Text -->
+  <!-- 能量球 -->
+  <g transform="translate(8, 20)">
+    <circle cx="46" cy="0" r="9" fill="url(#glowH)" filter="url(#glowHF)"/>
+    <circle cx="46" cy="0" r="6" fill="url(#energyH)"/>
+    <circle cx="44" cy="-2" r="2" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="47" cy="1" r="1.2" fill="#00BFFF" opacity="0.6"/>
+  </g>
+
+  <!-- 品牌文字 -->
   <g>
-    <text x="75" y="30" 
+    <text x="75" y="33" 
           font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
           font-size="22" 
           font-weight="700" 
-          fill="#0B2847"
+          fill="#2C3E50"
           letter-spacing="1.5">
       问视间
     </text>
 
-    <text x="75" y="50" 
+    <text x="75" y="53" 
           font-family="Arial, Helvetica, sans-serif" 
           font-size="14" 
           font-weight="700" 
-          fill="#1890FF"
+          fill="#5A6C7D"
           letter-spacing="2.5">
       WINSAI
     </text>
 
-    <line x1="145" y1="40" x2="145" y2="50" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+    <line x1="145" y1="43" x2="145" y2="53" stroke="currentColor" stroke-width="1" opacity="0.15"/>
 
-    <text x="155" y="50" 
+    <text x="155" y="53" 
           font-family="PingFang SC, Microsoft YaHei, sans-serif" 
           font-size="11" 
-          fill="#5A5A5A" 
+          fill="#7A8A9A" 
           opacity="0.75"
           letter-spacing="0.5">
       数据友好 · 智赢未来

@@ -1,90 +1,112 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="top256" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#40A9FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1890FF;stop-opacity:1" />
+    <linearGradient id="metal256" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8E8E8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0A0A0;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="left256" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#0B2847;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1677D9;stop-opacity:1" />
+    <linearGradient id="metalSide256" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#888888;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#606060;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="right256" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1677D9;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#597EF7;stop-opacity:1" />
+    <linearGradient id="metalInner256" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#303030;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="energy256" cx="50%" cy="40%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="30%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="glow256" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:0" />
+    </radialGradient>
+    
+    <linearGradient id="highlight256" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
     </linearGradient>
     
     <filter id="shadow256">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.2"/>
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-opacity="0.4"/>
+    </filter>
+    
+    <filter id="glow256F">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <circle cx="128" cy="110" r="100" fill="#F0F5FF" opacity="0.5"/>
-
-  <g transform="translate(40, 80)" filter="url(#shadow256)">
+  <g transform="translate(48, 104)" filter="url(#shadow256)">
     
-    <!-- W - Bar 1 -->
+    <!-- W柱1 -->
     <g>
-      <path d="M 8 56 L 24 48 L 24 80 L 8 88 Z" fill="url(#top256)"/>
-      <path d="M 8 56 L 8 88 L 16 104 L 16 72 Z" fill="url(#left256)"/>
-      <path d="M 24 48 L 24 80 L 32 96 L 32 64 Z" fill="url(#right256)"/>
+      <path d="M 12 64 L 4 72 L 4 104 L 12 96 Z" fill="url(#metal256)"/>
+      <path d="M 32 52 L 40 60 L 40 92 L 32 84 Z" fill="url(#metal256)"/>
+      <path d="M 4 104 L 12 96 L 32 84 L 40 92 Z" fill="url(#metalSide256)"/>
+      <path d="M 4 72 L 12 64 L 32 52 L 40 60 Z" fill="url(#metal256)"/>
+      <path d="M 14 68 L 8 74 L 8 100 L 14 94 L 30 84 L 36 88 L 36 62 L 30 56 Z" fill="url(#metalInner256)"/>
+      <path d="M 12 64 L 32 52 L 32 58 L 12 70 Z" fill="url(#highlight256)" opacity="0.5"/>
     </g>
     
-    <!-- W - Bar 2 -->
+    <!-- W柱2 -->
     <g>
-      <path d="M 40 80 L 56 72 L 56 88 L 40 96 Z" fill="url(#top256)"/>
-      <path d="M 40 80 L 40 96 L 48 104 L 48 88 Z" fill="url(#left256)"/>
-      <path d="M 56 72 L 56 88 L 64 96 L 64 80 Z" fill="url(#right256)"/>
+      <path d="M 44 60 L 36 68 L 36 100 L 44 92 Z" fill="url(#metal256)"/>
+      <path d="M 72 52 L 80 60 L 80 92 L 72 84 Z" fill="url(#metal256)"/>
+      <path d="M 36 100 L 44 92 L 72 84 L 80 92 Z" fill="url(#metalSide256)"/>
+      <path d="M 36 68 L 44 60 L 72 52 L 80 60 Z" fill="url(#metal256)"/>
+      <path d="M 46 64 L 40 70 L 40 96 L 46 90 L 70 82 L 76 86 L 76 60 L 70 54 Z" fill="url(#metalInner256)"/>
+      <path d="M 44 60 L 72 52 L 72 58 L 44 66 Z" fill="url(#highlight256)" opacity="0.5"/>
     </g>
     
-    <!-- W - Bar 3 -->
+    <!-- i柱 -->
     <g>
-      <path d="M 72 60 L 88 52 L 88 84 L 72 92 Z" fill="url(#top256)"/>
-      <path d="M 72 60 L 72 92 L 80 108 L 80 76 Z" fill="url(#left256)"/>
-      <path d="M 88 52 L 88 84 L 96 100 L 96 68 Z" fill="url(#right256)"/>
+      <path d="M 104 20 L 104 88 L 112 80 L 112 12 Z" fill="url(#metal256)"/>
+      <path d="M 112 12 L 124 20 L 124 88 L 112 80 Z" fill="url(#metalSide256)"/>
+      <path d="M 104 20 L 112 12 L 124 20 L 116 28 Z" fill="url(#metal256)"/>
+      <path d="M 104 88 L 112 80 L 124 88 L 116 96 Z" fill="url(#metalSide256)"/>
+      <rect x="108" y="24" width="8" height="56" fill="url(#metalInner256)"/>
+      <path d="M 104 20 L 112 12 L 112 18 L 104 26 Z" fill="url(#highlight256)" opacity="0.6"/>
+      <rect x="105" y="26" width="3" height="58" fill="url(#highlight256)" opacity="0.3"/>
     </g>
     
-    <!-- i - Bar 4 -->
-    <g>
-      <path d="M 128 24 L 144 16 L 144 112 L 128 120 Z" fill="url(#top256)"/>
-      <path d="M 128 24 L 128 120 L 136 128 L 136 32 Z" fill="url(#left256)"/>
-      <path d="M 144 16 L 144 112 L 152 120 L 152 24 Z" fill="url(#right256)"/>
-    </g>
-    
-    <!-- Red Dot -->
-    <circle cx="136" cy="0" r="14" fill="#FF4D4F"/>
-    
-    <!-- Arrow -->
-    <path d="M 128 -8 L 140 -20 L 152 -8" 
-          stroke="#52C41A" 
-          stroke-width="6" 
-          fill="none" 
-          stroke-linecap="round" 
-          stroke-linejoin="round"/>
   </g>
-  
-  <!-- Baseline -->
-  <line x1="40" y1="210" x2="216" y2="210" stroke="#1890FF" stroke-width="2" opacity="0.1"/>
 
-  <!-- Text -->
+  <!-- 能量球 -->
+  <g transform="translate(48, 104)">
+    <circle cx="114" cy="-4" r="28" fill="url(#glow256)" filter="url(#glow256F)"/>
+    <circle cx="114" cy="-4" r="20" fill="url(#energy256)"/>
+    <circle cx="108" cy="-12" r="6" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="111" cy="-9" r="4" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="118" cy="0" r="4" fill="#00BFFF" opacity="0.6"/>
+  </g>
+
+  <!-- 文字 -->
   <g>
-    <text x="128" y="228" 
+    <text x="128" y="220" 
           font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
           font-size="28" 
           font-weight="700" 
-          fill="#0B2847"
+          fill="#2C3E50"
           text-anchor="middle"
           letter-spacing="2">
       问视间
     </text>
 
-    <text x="128" y="250" 
+    <text x="128" y="246" 
           font-family="Arial, Helvetica, sans-serif" 
           font-size="16" 
           font-weight="700" 
-          fill="#1890FF"
+          fill="#5A6C7D"
           text-anchor="middle"
           letter-spacing="3">
       WINSAI

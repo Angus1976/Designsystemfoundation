@@ -1,39 +1,40 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="gradFavPro" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0B2847;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#1890FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#597EF7;stop-opacity:1" />
+    <linearGradient id="bgFav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3A3A3A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
     </linearGradient>
+    
+    <radialGradient id="energyFav" cx="50%" cy="40%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" />
+    </radialGradient>
+    
+    <filter id="glowFav">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="32" height="32" rx="7" fill="url(#gradFavPro)"/>
+  <rect width="32" height="32" rx="7" fill="url(#bgFav)"/>
 
-  <!-- "Wi" - Simplified bars -->
+  <!-- W - 极简 -->
   <g opacity="0.95">
-    <!-- W - Bar 1 -->
-    <rect x="4" y="14" width="3" height="8" rx="0.8" fill="#FFFFFF"/>
-    
-    <!-- W - Bar 2 -->
-    <rect x="9" y="16" width="3" height="6" rx="0.8" fill="#FFFFFF"/>
-    
-    <!-- W - Bar 3 -->
-    <rect x="14" y="15" width="3" height="7" rx="0.8" fill="#FFFFFF"/>
-    
-    <!-- i - Bar 4 -->
-    <rect x="21" y="10" width="3" height="14" rx="0.8" fill="#FFFFFF"/>
+    <path d="M 6 20 L 5 21 L 5 25 L 6 24 L 8 22 L 9 23 L 9 19 L 8 18 Z" fill="#C0C0C0"/>
+    <path d="M 10 19 L 9 20 L 9 24 L 10 23 L 14 21 L 15 22 L 15 18 L 14 17 Z" fill="#C0C0C0"/>
   </g>
   
-  <!-- Red Dot -->
-  <circle cx="22.5" cy="6" r="2" fill="#FF4D4F"/>
+  <!-- i -->
+  <rect x="19" y="13" width="3" height="12" rx="0.5" fill="#C0C0C0" opacity="0.95"/>
   
-  <!-- Arrow -->
-  <path d="M 21 5.5 L 23.5 3 L 26 5.5" 
-        stroke="#FFFFFF" 
-        stroke-width="1.5" 
-        fill="none" 
-        stroke-linecap="round" 
-        stroke-linejoin="round"
-        opacity="0.9"/>
+  <!-- 能量球 -->
+  <g filter="url(#glowFav)">
+    <circle cx="20.5" cy="9" r="3" fill="url(#energyFav)"/>
+    <circle cx="19.5" cy="7.8" r="1" fill="#FFFFFF" opacity="0.8"/>
+  </g>
 </svg>
