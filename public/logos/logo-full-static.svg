@@ -1,60 +1,73 @@
 <svg width="280" height="80" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="wGradientStatic" x1="0%" y1="100%" x2="0%" y2="0%">
+    <linearGradient id="mainGradStatic" x1="0%" y1="100%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#1890FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2E5FE8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#722ED1;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="glowGradientStatic" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="glowBgStatic" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.15" />
-      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:0.08" />
+      <stop offset="100%" style="stop-color:#722ED1;stop-opacity:0.08" />
     </linearGradient>
+    <filter id="glowStatic">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
-  <!-- Logo Icon: "Wi" Shape (Static) -->
-  <g transform="translate(6, 14)">
-    <!-- Background Circle -->
-    <circle cx="34" cy="26" r="30" fill="url(#glowGradientStatic)" opacity="0.4"/>
+  <!-- Logo Icon: "Wi" (Static) -->
+  <g transform="translate(8, 16)">
+    <!-- Background -->
+    <circle cx="32" cy="24" r="30" fill="url(#glowBgStatic)" opacity="0.4"/>
     
-    <!-- "W" Shape - 4 Tilted Bars -->
-    <g transform="rotate(-8 16 32)">
-      <rect x="12" y="20" width="8" height="28" rx="2.5" fill="url(#wGradientStatic)"/>
-    </g>
+    <!-- "W" - 3 strokes -->
+    <path d="M 12 14 L 18 36" 
+          stroke="url(#mainGradStatic)" 
+          stroke-width="7" 
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"
+          filter="url(#glowStatic)"/>
     
-    <g transform="rotate(12 24 36)">
-      <rect x="22" y="28" width="8" height="20" rx="2.5" fill="url(#wGradientStatic)"/>
-    </g>
+    <path d="M 18 36 L 26 22 L 34 36" 
+          stroke="url(#mainGradStatic)" 
+          stroke-width="7" 
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"
+          filter="url(#glowStatic)"/>
     
-    <g transform="rotate(-10 36 30)">
-      <rect x="34" y="18" width="8" height="30" rx="2.5" fill="url(#wGradientStatic)"/>
-    </g>
+    <path d="M 34 36 L 42 14" 
+          stroke="url(#mainGradStatic)" 
+          stroke-width="7" 
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"
+          filter="url(#glowStatic)"/>
     
-    <g transform="rotate(8 48 26)">
-      <rect x="46" y="14" width="8" height="34" rx="2.5" fill="url(#wGradientStatic)"/>
-    </g>
+    <!-- "i" - vertical stroke -->
+    <path d="M 54 10 L 54 44" 
+          stroke="url(#mainGradStatic)" 
+          stroke-width="7" 
+          stroke-linecap="round"
+          fill="none"
+          filter="url(#glowStatic)"/>
     
-    <!-- Bar 5: "i" shape - Straight -->
-    <rect x="60" y="8" width="8" height="40" rx="2.5" fill="url(#wGradientStatic)"/>
+    <!-- Red dot -->
+    <circle cx="54" cy="2" r="4.5" fill="#FF4D4F" filter="url(#glowStatic)"/>
     
-    <!-- Red Dot forming "i" -->
-    <circle cx="64" cy="3" r="3.5" fill="#FF4D4F"/>
+    <!-- Data points -->
+    <circle cx="15" cy="25" r="2" fill="#52C41A" opacity="0.7"/>
+    <circle cx="22" cy="29" r="2" fill="#52C41A" opacity="0.7"/>
+    <circle cx="30" cy="29" r="2" fill="#52C41A" opacity="0.7"/>
+    <circle cx="38" cy="25" r="2" fill="#52C41A" opacity="0.7"/>
+    <circle cx="54" cy="27" r="2" fill="#52C41A" opacity="0.7"/>
     
-    <!-- Wave Line -->
-    <path d="M 16 32 Q 24 40 30 36 T 48 26 Q 56 22 64 8" 
-          stroke="#FFFFFF" 
-          stroke-width="2" 
-          fill="none" 
-          opacity="0.7"
-          stroke-linecap="round"/>
-    
-    <!-- Data Points -->
-    <circle cx="16" cy="32" r="2.5" fill="#FFFFFF"/>
-    <circle cx="30" cy="36" r="2.5" fill="#FFFFFF"/>
-    <circle cx="38" cy="30" r="2.5" fill="#FFFFFF"/>
-    <circle cx="50" cy="26" r="2.5" fill="#FFFFFF"/>
-    <circle cx="64" cy="16" r="2.5" fill="#FFFFFF"/>
-    
-    <!-- Success Arrow -->
-    <path d="M 62 2 L 66 -2 L 70 2" 
+    <!-- Arrow -->
+    <path d="M 52 -1 L 56 -5 L 60 -1" 
           stroke="#52C41A" 
           stroke-width="2.5" 
           fill="none" 
@@ -63,29 +76,33 @@
   </g>
 
   <!-- Brand Text -->
-  <text x="90" y="38" 
-        font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
-        font-size="22" 
-        font-weight="700" 
-        fill="currentColor"
-        letter-spacing="0.5">
-    问视间
-  </text>
+  <g>
+    <text x="88" y="34" 
+          font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
+          font-size="20" 
+          font-weight="700" 
+          fill="currentColor"
+          letter-spacing="1">
+      问视间
+    </text>
 
-  <text x="90" y="58" 
-        font-family="Arial, Helvetica, sans-serif" 
-        font-size="14" 
-        font-weight="600" 
-        fill="#1890FF"
-        letter-spacing="2">
-    WINS
-  </text>
+    <text x="88" y="52" 
+          font-family="Arial, Helvetica, sans-serif" 
+          font-size="13" 
+          font-weight="700" 
+          fill="#1890FF"
+          letter-spacing="2">
+      WINSAI
+    </text>
 
-  <text x="138" y="58" 
-        font-family="PingFang SC, Microsoft YaHei, sans-serif" 
-        font-size="11" 
-        fill="currentColor" 
-        opacity="0.65">
-    数据向好，智赢未来
-  </text>
+    <line x1="145" y1="43" x2="145" y2="52" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+
+    <text x="152" y="52" 
+          font-family="PingFang SC, Microsoft YaHei, sans-serif" 
+          font-size="10" 
+          fill="currentColor" 
+          opacity="0.65">
+      数据友好 · 智赢未来
+    </text>
+  </g>
 </svg>

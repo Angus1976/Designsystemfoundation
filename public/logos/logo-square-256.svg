@@ -1,84 +1,90 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="wSq256" x1="0%" y1="100%" x2="0%" y2="0%">
+    <linearGradient id="grad256" x1="0%" y1="100%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#1890FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2E5FE8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#722ED1;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="bgSq256" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg256" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.12" />
-      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:0.06" />
+      <stop offset="100%" style="stop-color:#722ED1;stop-opacity:0.06" />
     </linearGradient>
+    <filter id="glow256">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
     <filter id="shadow256">
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15"/>
     </filter>
   </defs>
 
-  <!-- Background Circle -->
-  <circle cx="128" cy="110" r="100" fill="url(#bgSq256)"/>
+  <!-- Background -->
+  <circle cx="128" cy="110" r="100" fill="url(#bg256)"/>
 
   <!-- "Wi" Shape -->
   <g filter="url(#shadow256)">
-    <!-- W: 4 Tilted Bars -->
-    <g transform="rotate(-8 52 144)">
-      <rect x="40" y="104" width="24" height="80" rx="6" fill="url(#wSq256)"/>
-    </g>
+    <!-- W: 3 strokes -->
+    <path d="M 56 72 L 72 144" 
+          stroke="url(#grad256)" 
+          stroke-width="18" 
+          stroke-linecap="round"
+          fill="none"
+          filter="url(#glow256)"/>
     
-    <g transform="rotate(12 76 160)">
-      <rect x="68" y="136" width="24" height="56" rx="6" fill="url(#wSq256)"/>
-    </g>
+    <path d="M 72 144 L 96 96 L 120 144" 
+          stroke="url(#grad256)" 
+          stroke-width="18" 
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"
+          filter="url(#glow256)"/>
     
-    <g transform="rotate(-10 112 136)">
-      <rect x="104" y="96" width="24" height="80" rx="6" fill="url(#wSq256)"/>
-    </g>
+    <path d="M 120 144 L 144 72" 
+          stroke="url(#grad256)" 
+          stroke-width="18" 
+          stroke-linecap="round"
+          fill="none"
+          filter="url(#glow256)"/>
     
-    <g transform="rotate(8 148 120)">
-      <rect x="140" y="80" width="24" height="96" rx="6" fill="url(#wSq256)"/>
-    </g>
-    
-    <!-- i: Straight bar -->
-    <rect x="184" y="56" width="24" height="120" rx="6" fill="url(#wSq256)"/>
+    <!-- i: vertical -->
+    <path d="M 184 64 L 184 168" 
+          stroke="url(#grad256)" 
+          stroke-width="18" 
+          stroke-linecap="round"
+          fill="none"
+          filter="url(#glow256)"/>
   </g>
   
-  <!-- Red Dot for "i" -->
-  <circle cx="196" cy="40" r="12" fill="#FF4D4F" filter="url(#shadow256)"/>
+  <circle cx="184" cy="40" r="14" fill="#FF4D4F" filter="url(#shadow256)"/>
   
-  <!-- Wave Line -->
-  <path d="M 52 144 Q 76 168 100 156 T 152 120 Q 172 104 196 56" 
-        stroke="#FFFFFF" 
-        stroke-width="5" 
-        fill="none" 
-        opacity="0.6"
-        stroke-linecap="round"/>
-  
-  <!-- Data Points -->
+  <!-- Data points -->
   <g filter="url(#shadow256)">
-    <circle cx="52" cy="144" r="7" fill="#FFFFFF"/>
-    <circle cx="100" cy="160" r="7" fill="#FFFFFF"/>
-    <circle cx="116" cy="136" r="7" fill="#FFFFFF"/>
-    <circle cx="152" cy="120" r="7" fill="#FFFFFF"/>
-    <circle cx="196" cy="88" r="7" fill="#FFFFFF"/>
+    <circle cx="64" cy="108" r="6" fill="#52C41A" opacity="0.7"/>
+    <circle cx="84" cy="120" r="6" fill="#52C41A" opacity="0.7"/>
+    <circle cx="108" cy="120" r="6" fill="#52C41A" opacity="0.7"/>
+    <circle cx="132" cy="108" r="6" fill="#52C41A" opacity="0.7"/>
+    <circle cx="184" cy="116" r="6" fill="#52C41A" opacity="0.7"/>
   </g>
   
   <!-- Arrow -->
-  <path d="M 188 40 L 200 24 L 212 40" 
+  <path d="M 176 32 L 186 22 L 196 32" 
         stroke="#52C41A" 
         stroke-width="6" 
         fill="none" 
         stroke-linecap="round" 
         stroke-linejoin="round"/>
   
-  <!-- Baseline Grid -->
-  <g opacity="0.1">
-    <line x1="32" y1="192" x2="216" y2="192" stroke="#1890FF" stroke-width="2"/>
-    <line x1="32" y1="168" x2="216" y2="168" stroke="#1890FF" stroke-width="1.5"/>
-  </g>
+  <!-- Baseline -->
+  <line x1="48" y1="180" x2="200" y2="180" stroke="#1890FF" stroke-width="2" opacity="0.1"/>
 
-  <!-- Text Section -->
+  <!-- Text -->
   <g>
-    <!-- Chinese Name -->
-    <text x="128" y="228" 
+    <text x="128" y="218" 
           font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
-          font-size="32" 
+          font-size="28" 
           font-weight="700" 
           fill="currentColor"
           text-anchor="middle"
@@ -86,15 +92,14 @@
       问视间
     </text>
 
-    <!-- English Name -->
-    <text x="128" y="250" 
+    <text x="128" y="244" 
           font-family="Arial, Helvetica, sans-serif" 
-          font-size="18" 
+          font-size="16" 
           font-weight="700" 
           fill="#1890FF"
           text-anchor="middle"
-          letter-spacing="4">
-      WINS
+          letter-spacing="3">
+      WINSAI
     </text>
   </g>
 </svg>
