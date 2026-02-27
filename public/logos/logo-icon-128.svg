@@ -1,93 +1,118 @@
-<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
   <defs>
-    <linearGradient id="metal128" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#F5F5F5;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#D4D4D4;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#B8B8B8;stop-opacity:1" />
+    <linearGradient id="wGrad128" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C5CDD4"/>
+      <stop offset="15%" stop-color="#ADB5BD"/>
+      <stop offset="50%" stop-color="#8B9299"/>
+      <stop offset="85%" stop-color="#6B7278"/>
+      <stop offset="100%" stop-color="#5B6269"/>
     </linearGradient>
     
-    <linearGradient id="metalSide128" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#9E9E9E;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#6E6E6E;stop-opacity:1" />
+    <linearGradient id="metalShine128" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.5"/>
+      <stop offset="30%" stop-color="white" stop-opacity="0.2"/>
+      <stop offset="60%" stop-color="white" stop-opacity="0"/>
+      <stop offset="80%" stop-color="white" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.3"/>
     </linearGradient>
     
-    <linearGradient id="metalInner128" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#404040;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#2A2A2A;stop-opacity:1" />
-    </linearGradient>
-    
-    <radialGradient id="energy128" cx="50%" cy="35%">
-      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
-      <stop offset="20%" style="stop-color:#E0F7FF;stop-opacity:1" />
-      <stop offset="45%" style="stop-color:#5DADE2;stop-opacity:1" />
-      <stop offset="70%" style="stop-color:#3498DB;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#2874A6;stop-opacity:1" />
+    <radialGradient id="blueGlass128" cx="32%" cy="32%">
+      <stop offset="0%" stop-color="#D4E8F5"/>
+      <stop offset="15%" stop-color="#A3D0E8"/>
+      <stop offset="35%" stop-color="#6BA5CD"/>
+      <stop offset="60%" stop-color="#4A8FBD"/>
+      <stop offset="80%" stop-color="#2D5F7F"/>
+      <stop offset="100%" stop-color="#1A3A4D"/>
     </radialGradient>
     
-    <radialGradient id="glow128" cx="50%" cy="50%">
-      <stop offset="0%" style="stop-color:#85C1E9;stop-opacity:0.6" />
-      <stop offset="100%" style="stop-color:#3498DB;stop-opacity:0" />
+    <radialGradient id="glassHL128" cx="28%" cy="28%">
+      <stop offset="0%" stop-color="white" stop-opacity="1"/>
+      <stop offset="25%" stop-color="white" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.3"/>
+      <stop offset="75%" stop-color="white" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
     </radialGradient>
     
-    <linearGradient id="highlight128" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.6" />
-      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0.1" />
-    </linearGradient>
+    <radialGradient id="rimLight128" cx="80%" cy="50%">
+      <stop offset="0%" stop-color="#6BA5CD" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#6BA5CD" stop-opacity="0"/>
+      <stop offset="90%" stop-color="#A3D0E8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#D4E8F5" stop-opacity="0.9"/>
+    </radialGradient>
+    
+    <radialGradient id="sphereAO128" cx="50%" cy="70%">
+      <stop offset="0%" stop-color="black" stop-opacity="0"/>
+      <stop offset="60%" stop-color="black" stop-opacity="0"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.4"/>
+    </radialGradient>
     
     <filter id="shadow128">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="4" dy="6"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
     
-    <filter id="glow128F">
-      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+    <filter id="innerSh128" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5"/>
+      <feOffset dx="0" dy="3"/>
+      <feFlood flood-color="#000" flood-opacity="0.25"/>
+      <feComposite in2="offsetblur" operator="in"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
 
-  <g transform="translate(24, 52)" filter="url(#shadow128)">
+  <!-- 缩放并居中 W + 球体 -->
+  <g transform="translate(14, 14)">
+    <!-- 底部投影 -->
+    <ellipse cx="50" cy="95" rx="35" ry="3" fill="rgba(0,0,0,0.15)"/>
     
-    <!-- W柱1 -->
-    <g>
-      <path d="M 6 32 L 2 36 L 2 52 L 6 48 Z" fill="url(#metal128)"/>
-      <path d="M 16 26 L 20 30 L 20 46 L 16 42 Z" fill="url(#metal128)"/>
-      <path d="M 2 52 L 6 48 L 16 42 L 20 46 Z" fill="url(#metalSide128)"/>
-      <path d="M 2 36 L 6 32 L 16 26 L 20 30 Z" fill="url(#metal128)"/>
-      <path d="M 7 34 L 4 37 L 4 50 L 7 47 L 15 42 L 18 44 L 18 31 L 15 28 Z" fill="url(#metalInner128)"/>
-      <path d="M 6 32 L 16 26 L 16 29 L 6 35 Z" fill="url(#highlight128)" opacity="0.5"/>
-    </g>
+    <!-- W字母阴影 -->
+    <path d="M10,35 L20,35 L35,80 L45,50 L55,50 L65,80 L80,20 L90,20 L70,95 L60,95 L50,65 L40,95 L30,95 Z" 
+          fill="rgba(0,0,0,0.25)" 
+          transform="translate(3, 5)"/>
     
-    <!-- W柱2 -->
-    <g>
-      <path d="M 22 30 L 18 34 L 18 50 L 22 46 Z" fill="url(#metal128)"/>
-      <path d="M 36 26 L 40 30 L 40 46 L 36 42 Z" fill="url(#metal128)"/>
-      <path d="M 18 50 L 22 46 L 36 42 L 40 46 Z" fill="url(#metalSide128)"/>
-      <path d="M 18 34 L 22 30 L 36 26 L 40 30 Z" fill="url(#metal128)"/>
-      <path d="M 23 32 L 20 35 L 20 48 L 23 45 L 35 41 L 38 43 L 38 30 L 35 27 Z" fill="url(#metalInner128)"/>
-      <path d="M 22 30 L 36 26 L 36 29 L 22 33 Z" fill="url(#highlight128)" opacity="0.5"/>
-    </g>
+    <!-- W字母主体 -->
+    <path d="M10,35 L20,35 L35,80 L45,50 L55,50 L65,80 L80,20 L90,20 L70,95 L60,95 L50,65 L40,95 L30,95 Z" 
+          fill="url(#wGrad128)" 
+          filter="url(#innerSh128)"/>
     
-    <!-- i柱 -->
-    <g>
-      <path d="M 52 10 L 52 44 L 56 40 L 56 6 Z" fill="url(#metal128)"/>
-      <path d="M 56 6 L 62 10 L 62 44 L 56 40 Z" fill="url(#metalSide128)"/>
-      <path d="M 52 10 L 56 6 L 62 10 L 58 14 Z" fill="url(#metal128)"/>
-      <path d="M 52 44 L 56 40 L 62 44 L 58 48 Z" fill="url(#metalSide128)"/>
-      <rect x="54" y="12" width="4" height="28" fill="url(#metalInner128)"/>
-      <path d="M 52 10 L 56 6 L 56 9 L 52 13 Z" fill="url(#highlight128)" opacity="0.6"/>
-      <rect x="52.5" y="13" width="1.5" height="29" fill="url(#highlight128)" opacity="0.4"/>
-    </g>
+    <path d="M10,35 L20,35 L35,80 L45,50 L55,50 L65,80 L80,20 L90,20 L70,95 L60,95 L50,65 L40,95 L30,95 Z" 
+          fill="url(#metalShine128)"/>
     
-  </g>
-
-  <!-- 能量球 - 微调后 -->
-  <g transform="translate(24, 52)">
-    <circle cx="57" cy="-5" r="16" fill="url(#glow128)" filter="url(#glow128F)" opacity="0.75"/>
-    <circle cx="57" cy="-5" r="11" fill="url(#energy128)"/>
-    <circle cx="54" cy="-8.5" r="3.5" fill="#FFFFFF" opacity="0.9"/>
-    <circle cx="55.5" cy="-7" r="2.2" fill="#FFFFFF" opacity="0.7"/>
-    <circle cx="59.5" cy="-3" r="2" fill="#AED6F1" opacity="0.7"/>
+    <!-- 高光线 -->
+    <path d="M11,36 L19.5,36 L33,77 L44,51 L54,51 L63,77 L78.5,21 L89,21" 
+          fill="none" 
+          stroke="white" 
+          stroke-width="2.5" 
+          stroke-linecap="round" 
+          opacity="0.6"/>
+    
+    <!-- 球体投影 -->
+    <ellipse cx="86" cy="18" rx="7" ry="2.5" fill="rgba(0,0,0,0.35)"/>
+    <ellipse cx="85" cy="16.5" rx="5" ry="1.5" fill="rgba(0,0,0,0.45)"/>
+    
+    <!-- 蓝色玻璃球 -->
+    <circle cx="85" cy="12" r="8" fill="url(#blueGlass128)" filter="url(#shadow128)"/>
+    <circle cx="85" cy="12" r="8" fill="url(#sphereAO128)"/>
+    <circle cx="85" cy="12" r="8" fill="url(#rimLight128)"/>
+    <circle cx="85" cy="12" r="8" fill="url(#glassHL128)"/>
+    
+    <!-- 玻璃球高光 -->
+    <ellipse cx="82.5" cy="9.5" rx="3.5" ry="3" fill="white" opacity="0.9"/>
+    <ellipse cx="83.5" cy="10.5" rx="2" ry="1.5" fill="white" opacity="0.7"/>
+    <circle cx="81.5" cy="9" r="1.5" fill="white" opacity="1"/>
+    <circle cx="84" cy="11" r="0.8" fill="white" opacity="0.9"/>
+    
+    <circle cx="85" cy="13" r="6" fill="none" stroke="#6BA5CD" stroke-width="0.6" opacity="0.4"/>
+    <ellipse cx="87" cy="12" rx="1" ry="5" fill="white" opacity="0.2"/>
   </g>
 </svg>
