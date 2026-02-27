@@ -1,83 +1,110 @@
-<svg width="240" height="80" viewBox="0 0 240 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background Circle with Gradient -->
+<svg width="280" height="80" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="wGradient" x1="0%" y1="100%" x2="0%" y2="0%">
       <stop offset="0%" style="stop-color:#1890FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#096DD9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="labelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#52C41A;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#389E0D;stop-opacity:1" />
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:0.1" />
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
-  <!-- Background Circle -->
-  <circle cx="40" cy="40" r="32" fill="url(#bgGradient)" opacity="0.1"/>
-
-  <!-- Data Grid Lines -->
-  <g stroke="#1890FF" stroke-width="0.5" opacity="0.3">
-    <line x1="20" y1="20" x2="60" y2="20"/>
-    <line x1="20" y1="30" x2="60" y2="30"/>
-    <line x1="20" y1="40" x2="60" y2="40"/>
-    <line x1="20" y1="50" x2="60" y2="50"/>
-    <line x1="20" y1="60" x2="60" y2="60"/>
-    <line x1="20" y1="20" x2="20" y2="60"/>
-    <line x1="60" y1="20" x2="60" y2="60"/>
+  <!-- Logo Icon: W Shape with Rising Bars -->
+  <g transform="translate(8, 16)">
+    <!-- Background Circle (subtle) -->
+    <circle cx="32" cy="24" r="28" fill="url(#glowGradient)" opacity="0.3"/>
+    
+    <!-- W Shape - Three Rising Bars -->
+    <!-- Left Bar (Low) -->
+    <rect x="10" y="28" width="8" height="20" rx="2" fill="url(#wGradient)">
+      <animate attributeName="height" values="20;22;20" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="28;26;28" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Left-Middle Bar (Medium-Low) -->
+    <rect x="20" y="20" width="8" height="28" rx="2" fill="url(#wGradient)">
+      <animate attributeName="height" values="28;30;28" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="20;18;20" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Middle Bar (Medium) -->
+    <rect x="30" y="16" width="8" height="32" rx="2" fill="url(#wGradient)">
+      <animate attributeName="height" values="32;34;32" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="16;14;16" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Right-Middle Bar (Medium-High) -->
+    <rect x="40" y="12" width="8" height="36" rx="2" fill="url(#wGradient)">
+      <animate attributeName="height" values="36;38;36" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="12;10;12" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Right Bar (Highest) -->
+    <rect x="50" y="8" width="8" height="40" rx="2" fill="url(#wGradient)">
+      <animate attributeName="height" values="40;42;40" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="8;6;8" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Success Arrow (pointing up) -->
+    <path d="M 54 4 L 58 0 L 62 4" stroke="#52C41A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Data Points on top of bars -->
+    <circle cx="14" cy="26" r="2" fill="#FFFFFF">
+      <animate attributeName="cy" values="26;24;26" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="24" cy="18" r="2" fill="#FFFFFF">
+      <animate attributeName="cy" values="18;16;18" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="34" cy="14" r="2" fill="#FFFFFF">
+      <animate attributeName="cy" values="14;12;14" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="44" cy="10" r="2" fill="#FFFFFF">
+      <animate attributeName="cy" values="10;8;10" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="54" cy="6" r="2" fill="#FFFFFF">
+      <animate attributeName="cy" values="6;4;6" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Connecting Line (Growth Trend) -->
+    <path d="M 14 26 L 24 18 L 34 14 L 44 10 L 54 6" 
+          stroke="#FFFFFF" 
+          stroke-width="1.5" 
+          fill="none" 
+          opacity="0.6"
+          stroke-dasharray="2,2">
+      <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite"/>
+    </path>
   </g>
 
-  <!-- W Shape (Brand Mark) -->
-  <path d="M 25 28 L 30 45 L 35 28 L 40 45 L 45 28 L 50 45 L 55 28" 
-        stroke="#1890FF" 
-        stroke-width="2.5" 
-        fill="none" 
-        stroke-linecap="round" 
-        stroke-linejoin="round"/>
-
-  <!-- Data Points (Highlighted) -->
-  <circle cx="30" cy="45" r="2.5" fill="white" filter="url(#glow)"/>
-  <circle cx="40" cy="45" r="2.5" fill="white" filter="url(#glow)"/>
-  <circle cx="50" cy="45" r="2.5" fill="white" filter="url(#glow)"/>
-
-  <!-- Annotation Label Icon -->
-  <g transform="translate(48, 22)">
-    <rect x="0" y="0" width="12" height="8" rx="2" fill="url(#labelGradient)"/>
-    <circle cx="6" cy="10" r="1.5" fill="url(#labelGradient)"/>
-    <line x1="6" y1="8" x2="6" y2="10" stroke="url(#labelGradient)" stroke-width="1"/>
-  </g>
-
-  <!-- Data Flow Curves -->
-  <g stroke="#1890FF" stroke-width="1" fill="none" opacity="0.4">
-    <path d="M 24 52 Q 28 48, 32 52"/>
-    <path d="M 34 52 Q 38 48, 42 52"/>
-    <path d="M 44 52 Q 48 48, 52 52"/>
-  </g>
-
-  <!-- AI Indicator (3-layer concentric circles) -->
-  <g opacity="0.6">
-    <circle cx="56" cy="32" r="4" fill="none" stroke="#722ED1" stroke-width="0.5"/>
-    <circle cx="56" cy="32" r="3" fill="none" stroke="#722ED1" stroke-width="0.5"/>
-    <circle cx="56" cy="32" r="1.5" fill="#722ED1"/>
-  </g>
-
-  <!-- Text: 问视间 -->
-  <text x="90" y="38" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="600" fill="currentColor">
+  <!-- Brand Text: 问视间 -->
+  <text x="88" y="38" 
+        font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
+        font-size="22" 
+        font-weight="700" 
+        fill="currentColor"
+        letter-spacing="0.5">
     问视间
   </text>
 
-  <!-- Text: SuperInsight -->
-  <text x="90" y="56" font-family="Arial, sans-serif" font-size="12" font-weight="500" fill="currentColor" opacity="0.7">
-    SuperInsight
+  <!-- English Text: Wins -->
+  <text x="88" y="58" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="14" 
+        font-weight="600" 
+        fill="#1890FF"
+        letter-spacing="2">
+    WINS
   </text>
 
-  <!-- Subtitle: 数据标注，智见未来 -->
-  <text x="90" y="70" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="9" fill="currentColor" opacity="0.5">
-    数据标注，智见未来
+  <!-- Subtitle -->
+  <text x="135" y="58" 
+        font-family="PingFang SC, Microsoft YaHei, sans-serif" 
+        font-size="11" 
+        fill="currentColor" 
+        opacity="0.6">
+    数据上升，智见成功
   </text>
 </svg>

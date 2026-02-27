@@ -1,0 +1,78 @@
+<svg width="280" height="80" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wGradientStatic" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glowGradientStatic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Icon: W Shape with Rising Bars -->
+  <g transform="translate(8, 16)">
+    <!-- Background Circle (subtle) -->
+    <circle cx="32" cy="24" r="28" fill="url(#glowGradientStatic)" opacity="0.3"/>
+    
+    <!-- W Shape - Five Rising Bars (Static) -->
+    <rect x="10" y="28" width="8" height="20" rx="2" fill="url(#wGradientStatic)"/>
+    <rect x="20" y="20" width="8" height="28" rx="2" fill="url(#wGradientStatic)"/>
+    <rect x="30" y="16" width="8" height="32" rx="2" fill="url(#wGradientStatic)"/>
+    <rect x="40" y="12" width="8" height="36" rx="2" fill="url(#wGradientStatic)"/>
+    <rect x="50" y="8" width="8" height="40" rx="2" fill="url(#wGradientStatic)"/>
+    
+    <!-- Success Arrow (pointing up) -->
+    <path d="M 54 4 L 58 0 L 62 4" 
+          stroke="#52C41A" 
+          stroke-width="2" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Data Points on top of bars -->
+    <circle cx="14" cy="26" r="2" fill="#FFFFFF"/>
+    <circle cx="24" cy="18" r="2" fill="#FFFFFF"/>
+    <circle cx="34" cy="14" r="2" fill="#FFFFFF"/>
+    <circle cx="44" cy="10" r="2" fill="#FFFFFF"/>
+    <circle cx="54" cy="6" r="2" fill="#FFFFFF"/>
+    
+    <!-- Connecting Line (Growth Trend) -->
+    <path d="M 14 26 L 24 18 L 34 14 L 44 10 L 54 6" 
+          stroke="#FFFFFF" 
+          stroke-width="1.5" 
+          fill="none" 
+          opacity="0.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </g>
+
+  <!-- Brand Text: 问视间 -->
+  <text x="88" y="38" 
+        font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
+        font-size="22" 
+        font-weight="700" 
+        fill="currentColor"
+        letter-spacing="0.5">
+    问视间
+  </text>
+
+  <!-- English Text: Wins -->
+  <text x="88" y="58" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="14" 
+        font-weight="600" 
+        fill="#1890FF"
+        letter-spacing="2">
+    WINS
+  </text>
+
+  <!-- Subtitle -->
+  <text x="135" y="58" 
+        font-family="PingFang SC, Microsoft YaHei, sans-serif" 
+        font-size="11" 
+        fill="currentColor" 
+        opacity="0.6">
+    数据上升，智见成功
+  </text>
+</svg>
