@@ -5,49 +5,55 @@
       <stop offset="100%" style="stop-color:#52C41A;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="glowGradientStatic" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.2" />
-      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:0.1" />
+      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:0.08" />
     </linearGradient>
   </defs>
 
-  <!-- Logo Icon: W Shape with Rising Bars -->
+  <!-- Logo Icon: W Shape with 4 Bars (Static) -->
   <g transform="translate(8, 16)">
-    <!-- Background Circle (subtle) -->
-    <circle cx="32" cy="24" r="28" fill="url(#glowGradientStatic)" opacity="0.3"/>
+    <!-- Background Circle -->
+    <circle cx="32" cy="24" r="28" fill="url(#glowGradientStatic)" opacity="0.4"/>
     
-    <!-- W Shape - Five Rising Bars (Static) -->
-    <rect x="10" y="28" width="8" height="20" rx="2" fill="url(#wGradientStatic)"/>
-    <rect x="20" y="20" width="8" height="28" rx="2" fill="url(#wGradientStatic)"/>
-    <rect x="30" y="16" width="8" height="32" rx="2" fill="url(#wGradientStatic)"/>
-    <rect x="40" y="12" width="8" height="36" rx="2" fill="url(#wGradientStatic)"/>
-    <rect x="50" y="8" width="8" height="40" rx="2" fill="url(#wGradientStatic)"/>
+    <!-- W Shape - 4 Bars: 高-低-高-最高 -->
+    <rect x="12" y="20" width="9" height="28" rx="2.5" fill="url(#wGradientStatic)"/>
+    <rect x="24" y="28" width="9" height="20" rx="2.5" fill="url(#wGradientStatic)"/>
+    <rect x="36" y="16" width="9" height="32" rx="2.5" fill="url(#wGradientStatic)"/>
+    <rect x="48" y="8" width="9" height="40" rx="2.5" fill="url(#wGradientStatic)"/>
     
-    <!-- Success Arrow (pointing up) -->
-    <path d="M 54 4 L 58 0 L 62 4" 
+    <!-- Annotation Tag Icons -->
+    <g opacity="0.8">
+      <rect x="14" y="16" width="5" height="3" rx="0.8" fill="#52C41A"/>
+      <rect x="26" y="24" width="5" height="3" rx="0.8" fill="#52C41A"/>
+      <rect x="38" y="12" width="5" height="3" rx="0.8" fill="#52C41A"/>
+      <rect x="50" y="4" width="5" height="3" rx="0.8" fill="#52C41A"/>
+    </g>
+    
+    <!-- Success Arrow -->
+    <path d="M 52 2 L 56 -2 L 60 2" 
           stroke="#52C41A" 
-          stroke-width="2" 
+          stroke-width="2.5" 
           fill="none" 
           stroke-linecap="round" 
           stroke-linejoin="round"/>
     
-    <!-- Data Points on top of bars -->
-    <circle cx="14" cy="26" r="2" fill="#FFFFFF"/>
-    <circle cx="24" cy="18" r="2" fill="#FFFFFF"/>
-    <circle cx="34" cy="14" r="2" fill="#FFFFFF"/>
-    <circle cx="44" cy="10" r="2" fill="#FFFFFF"/>
-    <circle cx="54" cy="6" r="2" fill="#FFFFFF"/>
+    <!-- Data Points -->
+    <circle cx="16.5" cy="18" r="2.5" fill="#FFFFFF"/>
+    <circle cx="28.5" cy="26" r="2.5" fill="#FFFFFF"/>
+    <circle cx="40.5" cy="14" r="2.5" fill="#FFFFFF"/>
+    <circle cx="52.5" cy="6" r="2.5" fill="#FFFFFF"/>
     
-    <!-- Connecting Line (Growth Trend) -->
-    <path d="M 14 26 L 24 18 L 34 14 L 44 10 L 54 6" 
+    <!-- Connecting Line -->
+    <path d="M 16.5 18 L 28.5 26 L 40.5 14 L 52.5 6" 
           stroke="#FFFFFF" 
-          stroke-width="1.5" 
+          stroke-width="1.8" 
           fill="none" 
-          opacity="0.6"
+          opacity="0.7"
           stroke-linecap="round"
           stroke-linejoin="round"/>
   </g>
 
-  <!-- Brand Text: 问视间 -->
+  <!-- Brand Text -->
   <text x="88" y="38" 
         font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" 
         font-size="22" 
@@ -57,7 +63,6 @@
     问视间
   </text>
 
-  <!-- English Text: Wins -->
   <text x="88" y="58" 
         font-family="Arial, Helvetica, sans-serif" 
         font-size="14" 
@@ -67,12 +72,11 @@
     WINS
   </text>
 
-  <!-- Subtitle -->
   <text x="135" y="58" 
         font-family="PingFang SC, Microsoft YaHei, sans-serif" 
         font-size="11" 
         fill="currentColor" 
-        opacity="0.6">
-    数据上升，智见成功
+        opacity="0.65">
+    标注赋能，智胜未来
   </text>
 </svg>

@@ -5,77 +5,87 @@
       <stop offset="100%" style="stop-color:#52C41A;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.2" />
-      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:0.1" />
+      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:0.08" />
     </linearGradient>
   </defs>
 
-  <!-- Logo Icon: W Shape with Rising Bars -->
+  <!-- Logo Icon: W Shape with 4 Bars -->
   <g transform="translate(8, 16)">
     <!-- Background Circle (subtle) -->
-    <circle cx="32" cy="24" r="28" fill="url(#glowGradient)" opacity="0.3"/>
+    <circle cx="32" cy="24" r="28" fill="url(#glowGradient)" opacity="0.4"/>
     
-    <!-- W Shape - Three Rising Bars -->
-    <!-- Left Bar (Low) -->
-    <rect x="10" y="28" width="8" height="20" rx="2" fill="url(#wGradient)">
-      <animate attributeName="height" values="20;22;20" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="28;26;28" dur="2s" repeatCount="indefinite"/>
+    <!-- W Shape - 4 Rising Bars: 高-低-高-最高 -->
+    <!-- Bar 1 (Left - Medium) -->
+    <rect x="12" y="20" width="9" height="28" rx="2.5" fill="url(#wGradient)">
+      <animate attributeName="height" values="28;30;28" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="20;18;20" dur="2s" repeatCount="indefinite"/>
     </rect>
     
-    <!-- Left-Middle Bar (Medium-Low) -->
-    <rect x="20" y="20" width="8" height="28" rx="2" fill="url(#wGradient)">
-      <animate attributeName="height" values="28;30;28" dur="2s" begin="0.2s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="20;18;20" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+    <!-- Bar 2 (Center-Left - Lowest, W valley) -->
+    <rect x="24" y="28" width="9" height="20" rx="2.5" fill="url(#wGradient)">
+      <animate attributeName="height" values="20;22;20" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="28;26;28" dur="2s" begin="0.3s" repeatCount="indefinite"/>
     </rect>
     
-    <!-- Middle Bar (Medium) -->
-    <rect x="30" y="16" width="8" height="32" rx="2" fill="url(#wGradient)">
-      <animate attributeName="height" values="32;34;32" dur="2s" begin="0.4s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="16;14;16" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+    <!-- Bar 3 (Center-Right - Medium-High) -->
+    <rect x="36" y="16" width="9" height="32" rx="2.5" fill="url(#wGradient)">
+      <animate attributeName="height" values="32;34;32" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="16;14;16" dur="2s" begin="0.6s" repeatCount="indefinite"/>
     </rect>
     
-    <!-- Right-Middle Bar (Medium-High) -->
-    <rect x="40" y="12" width="8" height="36" rx="2" fill="url(#wGradient)">
-      <animate attributeName="height" values="36;38;36" dur="2s" begin="0.6s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="12;10;12" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    <!-- Bar 4 (Right - Highest, Rising!) -->
+    <rect x="48" y="8" width="9" height="40" rx="2.5" fill="url(#wGradient)">
+      <animate attributeName="height" values="40;43;40" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="8;5;8" dur="2s" begin="0.9s" repeatCount="indefinite"/>
     </rect>
     
-    <!-- Right Bar (Highest) -->
-    <rect x="50" y="8" width="8" height="40" rx="2" fill="url(#wGradient)">
-      <animate attributeName="height" values="40;42;40" dur="2s" begin="0.8s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="8;6;8" dur="2s" begin="0.8s" repeatCount="indefinite"/>
-    </rect>
+    <!-- Annotation Tag Icons (业务相关) -->
+    <g opacity="0.8">
+      <!-- Tag 1 -->
+      <rect x="14" y="16" width="5" height="3" rx="0.8" fill="#52C41A"/>
+      <!-- Tag 2 -->
+      <rect x="26" y="24" width="5" height="3" rx="0.8" fill="#52C41A"/>
+      <!-- Tag 3 -->
+      <rect x="38" y="12" width="5" height="3" rx="0.8" fill="#52C41A"/>
+      <!-- Tag 4 -->
+      <rect x="50" y="4" width="5" height="3" rx="0.8" fill="#52C41A"/>
+    </g>
     
-    <!-- Success Arrow (pointing up) -->
-    <path d="M 54 4 L 58 0 L 62 4" stroke="#52C41A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+    <!-- Success Arrow (最后上升) -->
+    <path d="M 52 2 L 56 -2 L 60 2" 
+          stroke="#52C41A" 
+          stroke-width="2.5" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round">
+      <animate attributeName="opacity" values="1;0.6;1" dur="1.5s" repeatCount="indefinite"/>
     </path>
     
-    <!-- Data Points on top of bars -->
-    <circle cx="14" cy="26" r="2" fill="#FFFFFF">
-      <animate attributeName="cy" values="26;24;26" dur="2s" repeatCount="indefinite"/>
+    <!-- Data Points -->
+    <circle cx="16.5" cy="18" r="2.5" fill="#FFFFFF">
+      <animate attributeName="cy" values="18;16;18" dur="2s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="24" cy="18" r="2" fill="#FFFFFF">
-      <animate attributeName="cy" values="18;16;18" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+    <circle cx="28.5" cy="26" r="2.5" fill="#FFFFFF">
+      <animate attributeName="cy" values="26;24;26" dur="2s" begin="0.3s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="34" cy="14" r="2" fill="#FFFFFF">
-      <animate attributeName="cy" values="14;12;14" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+    <circle cx="40.5" cy="14" r="2.5" fill="#FFFFFF">
+      <animate attributeName="cy" values="14;12;14" dur="2s" begin="0.6s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="44" cy="10" r="2" fill="#FFFFFF">
-      <animate attributeName="cy" values="10;8;10" dur="2s" begin="0.6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="54" cy="6" r="2" fill="#FFFFFF">
-      <animate attributeName="cy" values="6;4;6" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+    <circle cx="52.5" cy="6" r="2.5" fill="#FFFFFF">
+      <animate attributeName="cy" values="6;3;6" dur="2s" begin="0.9s" repeatCount="indefinite"/>
     </circle>
     
     <!-- Connecting Line (Growth Trend) -->
-    <path d="M 14 26 L 24 18 L 34 14 L 44 10 L 54 6" 
+    <path d="M 16.5 18 L 28.5 26 L 40.5 14 L 52.5 6" 
           stroke="#FFFFFF" 
-          stroke-width="1.5" 
+          stroke-width="1.8" 
           fill="none" 
-          opacity="0.6"
-          stroke-dasharray="2,2">
-      <animate attributeName="stroke-dashoffset" from="0" to="20" dur="2s" repeatCount="indefinite"/>
+          opacity="0.7"
+          stroke-dasharray="3,3"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+      <animate attributeName="stroke-dashoffset" from="0" to="24" dur="2s" repeatCount="indefinite"/>
     </path>
   </g>
 
@@ -104,7 +114,7 @@
         font-family="PingFang SC, Microsoft YaHei, sans-serif" 
         font-size="11" 
         fill="currentColor" 
-        opacity="0.6">
-    数据上升，智见成功
+        opacity="0.65">
+    标注赋能，智胜未来
   </text>
 </svg>

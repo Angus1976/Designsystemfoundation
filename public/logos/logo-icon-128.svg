@@ -5,37 +5,42 @@
       <stop offset="100%" style="stop-color:#52C41A;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="bgGrad128" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.15" />
-      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:0.05" />
+      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.12" />
+      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:0.06" />
     </linearGradient>
     <filter id="shadow128">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
     </filter>
   </defs>
 
   <!-- Background -->
   <circle cx="64" cy="64" r="56" fill="url(#bgGrad128)"/>
 
-  <!-- W Shape - Five Rising Bars -->
+  <!-- W Shape - 4 Bars -->
   <g filter="url(#shadow128)">
-    <!-- Left Bar (Lowest) -->
-    <rect x="24" y="72" width="14" height="32" rx="4" fill="url(#wGrad128)"/>
+    <!-- Bar 1 (Medium) -->
+    <rect x="28" y="56" width="16" height="48" rx="4" fill="url(#wGrad128)"/>
     
-    <!-- Left-Middle Bar (Low-Medium) -->
-    <rect x="42" y="56" width="14" height="48" rx="4" fill="url(#wGrad128)"/>
+    <!-- Bar 2 (Lowest - W valley) -->
+    <rect x="50" y="72" width="16" height="32" rx="4" fill="url(#wGrad128)"/>
     
-    <!-- Middle Bar (Medium) -->
-    <rect x="60" y="48" width="14" height="56" rx="4" fill="url(#wGrad128)"/>
+    <!-- Bar 3 (Medium-High) -->
+    <rect x="72" y="48" width="16" height="56" rx="4" fill="url(#wGrad128)"/>
     
-    <!-- Right-Middle Bar (Medium-High) -->
-    <rect x="78" y="40" width="14" height="64" rx="4" fill="url(#wGrad128)"/>
-    
-    <!-- Right Bar (Highest) -->
-    <rect x="96" y="32" width="14" height="72" rx="4" fill="url(#wGrad128)"/>
+    <!-- Bar 4 (Highest - Rising!) -->
+    <rect x="94" y="32" width="16" height="72" rx="4" fill="url(#wGrad128)"/>
+  </g>
+  
+  <!-- Annotation Tags -->
+  <g opacity="0.8">
+    <rect x="32" y="48" width="8" height="5" rx="1.5" fill="#52C41A"/>
+    <rect x="54" y="64" width="8" height="5" rx="1.5" fill="#52C41A"/>
+    <rect x="76" y="40" width="8" height="5" rx="1.5" fill="#52C41A"/>
+    <rect x="98" y="24" width="8" height="5" rx="1.5" fill="#52C41A"/>
   </g>
   
   <!-- Success Arrow -->
-  <path d="M 100 24 L 107 16 L 114 24" 
+  <path d="M 98 24 L 106 16 L 114 24" 
         stroke="#52C41A" 
         stroke-width="4" 
         fill="none" 
@@ -43,14 +48,13 @@
         stroke-linejoin="round"/>
   
   <!-- Data Points -->
-  <circle cx="31" cy="68" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
-  <circle cx="49" cy="52" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
-  <circle cx="67" cy="44" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
-  <circle cx="85" cy="36" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
-  <circle cx="103" cy="28" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
+  <circle cx="36" cy="52" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
+  <circle cx="58" cy="68" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
+  <circle cx="80" cy="44" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
+  <circle cx="102" cy="28" r="5" fill="#FFFFFF" filter="url(#shadow128)"/>
   
   <!-- Growth Trend Line -->
-  <path d="M 31 68 L 49 52 L 67 44 L 85 36 L 103 28" 
+  <path d="M 36 52 L 58 68 L 80 44 L 102 28" 
         stroke="#FFFFFF" 
         stroke-width="3" 
         fill="none" 
@@ -58,8 +62,7 @@
         stroke-linecap="round"
         stroke-linejoin="round"/>
   
-  <!-- Baseline Grid (subtle) -->
-  <line x1="20" y1="104" x2="114" y2="104" stroke="#1890FF" stroke-width="1" opacity="0.2"/>
-  <line x1="20" y1="88" x2="114" y2="88" stroke="#1890FF" stroke-width="1" opacity="0.15"/>
-  <line x1="20" y1="72" x2="114" y2="72" stroke="#1890FF" stroke-width="1" opacity="0.1"/>
+  <!-- Baseline Grid -->
+  <line x1="24" y1="104" x2="114" y2="104" stroke="#1890FF" stroke-width="1" opacity="0.15"/>
+  <line x1="24" y1="88" x2="114" y2="88" stroke="#1890FF" stroke-width="1" opacity="0.1"/>
 </svg>

@@ -5,32 +5,37 @@
       <stop offset="100%" style="stop-color:#52C41A;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="bgGrad64" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.15" />
-      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:0.05" />
+      <stop offset="0%" style="stop-color:#1890FF;stop-opacity:0.12" />
+      <stop offset="100%" style="stop-color:#52C41A;stop-opacity:0.06" />
     </linearGradient>
   </defs>
 
   <!-- Background -->
   <circle cx="32" cy="32" r="28" fill="url(#bgGrad64)"/>
 
-  <!-- W Shape - Five Rising Bars forming W -->
-  <!-- Left Bar (Lowest) -->
-  <rect x="12" y="36" width="7" height="16" rx="2" fill="url(#wGrad64)"/>
+  <!-- W Shape - 4 Bars: 高-低-高-最高 -->
+  <!-- Bar 1 (Medium) -->
+  <rect x="14" y="28" width="8" height="24" rx="2" fill="url(#wGrad64)"/>
   
-  <!-- Left-Middle Bar (Low-Medium) -->
-  <rect x="21" y="28" width="7" height="24" rx="2" fill="url(#wGrad64)"/>
+  <!-- Bar 2 (Lowest - W valley) -->
+  <rect x="25" y="36" width="8" height="16" rx="2" fill="url(#wGrad64)"/>
   
-  <!-- Middle Bar (Medium) -->
-  <rect x="30" y="24" width="7" height="28" rx="2" fill="url(#wGrad64)"/>
+  <!-- Bar 3 (Medium-High) -->
+  <rect x="36" y="24" width="8" height="28" rx="2" fill="url(#wGrad64)"/>
   
-  <!-- Right-Middle Bar (Medium-High) -->
-  <rect x="39" y="20" width="7" height="32" rx="2" fill="url(#wGrad64)"/>
+  <!-- Bar 4 (Highest - Rising!) -->
+  <rect x="47" y="16" width="8" height="36" rx="2" fill="url(#wGrad64)"/>
   
-  <!-- Right Bar (Highest) -->
-  <rect x="48" y="16" width="7" height="36" rx="2" fill="url(#wGrad64)"/>
+  <!-- Annotation Tags -->
+  <g opacity="0.75">
+    <rect x="16" y="24" width="4" height="2.5" rx="0.6" fill="#52C41A"/>
+    <rect x="27" y="32" width="4" height="2.5" rx="0.6" fill="#52C41A"/>
+    <rect x="38" y="20" width="4" height="2.5" rx="0.6" fill="#52C41A"/>
+    <rect x="49" y="12" width="4" height="2.5" rx="0.6" fill="#52C41A"/>
+  </g>
   
   <!-- Success Arrow -->
-  <path d="M 50 12 L 54 8 L 58 12" 
+  <path d="M 49 12 L 53 8 L 57 12" 
         stroke="#52C41A" 
         stroke-width="2.5" 
         fill="none" 
@@ -38,18 +43,17 @@
         stroke-linejoin="round"/>
   
   <!-- Data Points -->
-  <circle cx="15.5" cy="34" r="2.5" fill="#FFFFFF"/>
-  <circle cx="24.5" cy="26" r="2.5" fill="#FFFFFF"/>
-  <circle cx="33.5" cy="22" r="2.5" fill="#FFFFFF"/>
-  <circle cx="42.5" cy="18" r="2.5" fill="#FFFFFF"/>
-  <circle cx="51.5" cy="14" r="2.5" fill="#FFFFFF"/>
+  <circle cx="18" cy="26" r="2.5" fill="#FFFFFF"/>
+  <circle cx="29" cy="34" r="2.5" fill="#FFFFFF"/>
+  <circle cx="40" cy="22" r="2.5" fill="#FFFFFF"/>
+  <circle cx="51" cy="14" r="2.5" fill="#FFFFFF"/>
   
   <!-- Growth Trend Line -->
-  <path d="M 15.5 34 L 24.5 26 L 33.5 22 L 42.5 18 L 51.5 14" 
+  <path d="M 18 26 L 29 34 L 40 22 L 51 14" 
         stroke="#FFFFFF" 
         stroke-width="2" 
         fill="none" 
-        opacity="0.5"
+        opacity="0.6"
         stroke-linecap="round"
         stroke-linejoin="round"/>
 </svg>
